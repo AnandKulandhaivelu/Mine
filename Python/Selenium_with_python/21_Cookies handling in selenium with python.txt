@@ -1,0 +1,41 @@
+-----------------------------------------
+Cookies handling in selenium with python
+-----------------------------------------
+
+from selenium import webdriver
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://www.amazon.in/")
+
+# Capture all cookies:
+--------------------------
+
+cookies=driver.get_cookies()
+print(len(cookies))
+print(cookies)
+
+
+# Adding new cookies:
+-----------------------
+
+cookies={'name':"Mycookies",'Value'="1234567"}
+driver.add_cookies(cookie)
+
+cookies=driver.get_cookies()
+print(len(cookies))
+print(cookies)
+
+# Deleting cookies:
+--------------------
+
+driver.delete_cookies('Mycookies')
+cookies=driver.get_cookies()
+print(len(cookies))
+
+
+# Deleting all cookies:
+----------------------------
+driver.delete_all_cookies()
+cookies=driver.get_cookies()
+print(cookies)

@@ -1,0 +1,143 @@
+# Creating Test case and Test suites in python Unittest frame work
+# Executing Test Suites
+
+'''
+# Package 1:
+    - TC_Logintest.py
+        - test_loginbygmail()
+        - test_loginbyfacebook()
+        - test_loginbytwitter()
+    - TC_Singuptest.py
+        - test_Signupbyemail()
+        - test_Signupbyfacebook()
+        - test_Signupbytwitter()
+# Package 2:
+    - TC_PaymentTest.py
+        - test_Paymentindollar()
+        - test_Payementinruppes()
+    - TC_PaymentReturns.py
+        - test_paymentReturnbybank()
+
+# Testsuites Package
+    - All_TestSuites.py
+        - sanity_test_suites
+        - master_test_suites
+        - functional_test_suites
+'''
+
+'''
+'''
+# Package 1:
+    - TC_Logintest.py
+        - test_loginbygmail()
+        - test_loginbyfacebook()
+        - test_loginbytwitter()
+    - TC_Singuptest.py
+        - test_Signupbyemail()
+        - test_Signupbyfacebook()
+        - test_Signupbytwitter()
+
+'''
+
+# Login:
+
+import unittest
+
+class Logintest(unittest.TestCase):
+    def test_loginbygmail(self):
+        print("This is login by gmail")
+        self.assertTrue(True)
+
+    def test_loginbyfacebook(self):
+        print("This is login by facebook")
+        self.assertTrue(True)
+
+    def test_loginbytwitter(self):
+        print("This is login by twitter")
+        self.assertTrue(True)
+
+if __name__== "__main__":
+    unittest.main()
+
+#Signup:
+
+import unittest
+
+class Signuptest(unittest.TestCase):
+    def test_signupbygmail(self):
+        print("This is signup by gmail")
+        self.assertTrue(True)
+
+    def test_signupbyfacebook(self):
+        print("This is signup by facebook")
+        self.assertTrue(True)
+
+    def test_signupbytwitter(self):
+        print("This is signup by twitter")
+        self.assertTrue(True)
+
+if __name__== "__main__":
+    unittest.main()
+
+
+# paymentmethod:
+
+import unittest
+
+class paymentmethod(unittest.TestCase):
+    def test_paymentindollar(self):
+        print("This is payment in Dollars")
+        self.assertTrue(True)
+
+    def test_paymentinrupees(self):
+        print("This is payment in Ruppees")
+        self.assertTrue(True)
+
+
+if __name__== "__main__":
+    unittest.main()
+
+# payment return:
+
+import unittest
+
+class paymentreturn(unittest.TestCase):
+    def test_paymentinbank(self):
+        print("This is payment return in bank")
+        self.assertTrue(True)
+
+if __name__== "__main__":
+    unittest.main()
+
+
+# All_test_suites:
+
+import unittest
+from pytestunittest.package1.TC_logintest import Logintest
+from pytestunittest.package1.TC_Signuptest import Signuptest
+
+from pytestunittest.package2.TC_paymenttest import paymentmethod
+from pytestunittest.package2.TC_paymentreturns import paymentreturn
+
+# Get all tests from login test,siguptest,payment test and paymentreturn test
+
+tc1=unittest.TestLoader().loadTestsFromTestCase(Logintest)
+tc2=unittest.TestLoader().loadTestsFromTestCase(Signuptest)
+tc3=unittest.TestLoader().loadTestsFromTestCase(paymentmethod)
+tc4=unittest.TestLoader().loadTestsFromTestCase(paymentreturn)
+
+# sanity test
+
+sanity_test_suite=unittest.TestSuite([tc1,tc2])
+unittest.TextTestRunner().run(sanity_test_suite)
+
+
+# funtctional test
+
+functional_test_suite=unittest.TestSuite([tc3,tc4])
+unittest.TextTestRunner().run(functional_test_suite)
+
+# master test
+
+Master_test_suite=unittest.TestSuite([tc1,tc2,tc3,tc4])
+unittest.TextTestRunner(verbosity=2).run(Master_test_suite)

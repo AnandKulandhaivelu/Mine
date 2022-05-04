@@ -1,0 +1,38 @@
+----------------------------------
+Assertion in Selenium with python
+----------------------------------
+
+(assertIn, assertIsNotIn)
+
+
+
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google1(self):
+		
+		list=("Python","java","selenium","pycharm")
+		self.assertIn (Python,list)
+		
+
+	def test_google2(self):
+		
+		list=("Python","java","selenium","pycharm")
+		self.assertISNotIn (Python,list)
+
+	def test_google3(self):
+		
+		list=("Python","java","selenium","pycharm")
+		self.assertIn (Ruby,list)
+
+	def test_google4(self):
+		
+		list=("Python","java","selenium","pycharm")
+		self.assertIn (Ruby,list)
+
+
+if__name__="__main__":
+   unittest.main()

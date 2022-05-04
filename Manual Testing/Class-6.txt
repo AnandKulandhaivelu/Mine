@@ -1,0 +1,106 @@
+Test data desing techniques / Test case desing techniques
+-------------------------------------------------------------
+There are 5 ways mainly use to drive the test data
+
+Those are,
+	1) Equivalence class partioning (ECP)
+	2) Boundry value analysis (BVA)
+	3) Decision table
+	4) State transiton
+	5) Error Guessing
+
+1) Equivalence class partioning (ECP):
+--------------------------------------
+	In this testing use to divide / partitioning the test data.
+	In this method mainly use for reducing the test data and increasing the coverage limits.
+
+Example : 
+		input fields accpet values between 1-500 only.
+
+
+normal test data		ECP method                ECP test data
+-----------------		-----------		-----------------
+1				-100 to o  -- invalid		-50
+2				 1 to 100  -- valid		 30
+3				 101 to 200 - valid		 150
+.				     .
+.				     .
+.				     .
+.				401 to 500  --valid		420
+500				501 to 600  --invalid		580
+
+
+we simply the test data based on the partition value. and then, cover all the level of inputs like valid and invalid.
+
+2) Boundry value analysis (BVA):
+------------------------------------
+	In this boundry value analysis technique mainly focus on limited level of the data to be tested.
+
+	In this scenarios we use valid test data, and invalid test data.
+
+Example :
+		Input fields accept values between 18 to 30 only
+
+In the boundry value analysis techniques we normally use min value, min -1 value, min +1 value, Max value, Max-1 value, Max+1 value.
+
+		
+	Min -1:	17 -- invalid data
+	Min   :	18 -- valid data
+	Min +1:	19 -- valid data
+
+	Max -1: 29 -- valid data
+	Max   : 30 -- valid data
+	Max +1: 31 -- invalid data.
+
+
+
+The Equivalence class partioning / Boundry value analysis these two techniques are called as input field testing.
+
+
+
+3) Decision table : 
+------------------------
+	In this Decision table techniques mainly focus on cause and effect.
+	The testing methodology we use condition and action for the test data.In this decision table techniques is the easy way of writing Test cases.
+	
+Example :
+		The requirements like need to fund transfer to another account.
+
+Conditions :
+--------------
+	1) first condition is find out account verified or not.
+	2) second condition is having sufficient money in the account or not.
+	3) Third condition is While transfering money user able to get OTP authendication or not
+
+Actions :
+--------------
+	1) All the three condition are true means transfer is intiated.
+	2) If the OTP is not get the transfer declined.
+	3) If the Insufficient money in account the transfer is declined.
+
+Based on the condition and actions we need to write the Testcases.
+
+4) State Transition:
+------------------------
+	In this State transition techniques.Data's depents on the State level.
+	If the one state level is faild means the data flow will automatically move to end level of states.
+
+Example : 
+	
+	State-1 : Valid input -----> (End state) Target
+	State-2 : Invalid input ---> (Repeting once again) State 1
+	State-3 : Invalid input ---> (Repeting once again) State 1
+	  .
+	  .
+This will continue only for the certain levels.
+
+	for example : Internet banking login scenario. we must try atleast 3 attempt only after that the session is expire.
+		      We need to wait some time then only we process our request.
+
+5) Error Guessing : 
+-------------------
+	In this Error Guessing methods fully based on the tester experiance level.
+	The tester normal found the bug or defect without any documentation.
+	while viewing the software functionality the tester identify some error in this techniques called as error guessing.
+
+	Example :  Checking the buttons funtionality in softwares, Navigation of web pages.	

@@ -1,0 +1,60 @@
+#-------------------------
+#    Dictionary
+#-------------------------
+'''
+    -Dictionaries are used to store data as KEY:VALUE pairs
+    -Dictioaries are changable
+'''
+
+# Defining Dictionary
+demo={1:10,2:20,3:30,4:40}
+demo1={"A":"Appel","B":"Banana","C":"Carrot"}
+demo2={1:"Hai",2:"Hello"}
+
+print(demo)
+print(demo1)
+print(demo2)
+# Finding Type
+
+print(type(demo))
+
+# Fetching item from Dictionary
+print(demo[1])
+print(demo1['B'])
+print(demo2[2])
+# Adding item in Dictionary
+demo[5]=50
+print(demo)
+demo1['D']='Dark choclate'
+print(demo1)
+# Removing item in Dictionary
+demo1.pop('D')
+print(demo1)
+demo.pop(5)
+print(demo)
+
+
+'''
+Methods in Dictionaries
+'''
+#get()- It will get the value based on the given key
+print(demo.get(1))
+#keys() - It will print all the keys in dictionaires
+print(demo1.keys())
+#items() - It will print all the dictionary key and value pair with in the Tuple
+print(demo2.items())
+#values() - It will print all the values in dictionaires
+print(demo.values())
+#pop() - remove particular item in Dictionaries
+print(demo1.pop('B'))
+#popitem() - Remove last item in Dictionaries
+print(demo2.popitem())
+#update() - It will update the dictionary with key value
+demo.update({'5':'50'})
+print(demo)
+#copy()- It will copy of the dictionary
+demo_copy=demo.copy()
+print(demo_copy)
+#clear() - It will clear dictionary
+demo_copy.clear()
+print(demo_copy)

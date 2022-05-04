@@ -1,0 +1,36 @@
+------------------------------------
+Links in selenium with python
+------------------------------------
+
+1) how many links present in webpage
+2) capture all the links in webpage
+3) click action perfermed in links
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://demo.guru99.com/test/newtours/")
+
+Stored all link text in one variable:
+------------------------------------------
+links=driver.find_elements(By.TAG_NAME,"a")
+
+find out how many link text in webpage:
+----------------------------------------
+print(len(links))
+
+print the link text value using for loop:
+-----------------------------------------
+for link in links:
+    print(link.text)
+
+Click action using link_text and Partial_link_text:
+----------------------------------------------------
+driver.find_element(By.LINK_TEXT,"REGISTER").click()
+
+driver.find_element(By.PARTIAL_LINK_TEXT,"REG").click()

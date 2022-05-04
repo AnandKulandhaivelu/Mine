@@ -1,0 +1,22 @@
+----------------------------------------
+Upload files using selenium with python
+----------------------------------------
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import Actionchains
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://opensource-demo.orangehrmlive.com/")
+
+driver.maximize_window()
+
+driver.swithc_to.frame(0)
+
+driver.find_element_by_id("RESULT_FileUpload-10").send_Keys("C://Users/matrix/Desktop/Class/Python/Selenium_with_python/Apple.jpg")
+
+driver.quit()

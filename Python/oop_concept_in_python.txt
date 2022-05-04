@@ -1,0 +1,49 @@
+=====================
+Python OOP Concepts:
+=====================
+
+	-Class
+
+	-Object
+
+	-Method
+
+	-Inheritance
+
+	-Polymorphism
+
+	-Data Abstraction
+
+	-Encapsulation
+
+Class:
+------
+   - Class can be defined as a Collection of Objects.
+   - Class is like a object constructor, or a blueprint for creating objects.
+   - Example if we have Employee class.It should contain attributes and methods like 
+     email id,name,age,salary etc..
+   - All class have __init__ function.which is always executed is being initiated. 
+
+    Syntax:
+	  class classname:
+		<statement 1>
+		.
+		.
+		.
+		.
+		<statement n>
+
+
+	  Class person:
+		def__init__(self,name,age):
+		self.name=name
+		self.age=age
+
+	  p1=person("Anand",36)
+	  print(p1.name)
+	  print(p1.age)
+
+
+Object:
+-------
+    

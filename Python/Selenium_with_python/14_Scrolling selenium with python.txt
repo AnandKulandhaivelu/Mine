@@ -1,0 +1,39 @@
+---------------------------------
+Scorling in selenium with python
+--------------------------------
+	- Scroll by pixel
+	- Scroll by visible element
+	- Scroll by page end
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+
+driver.maximize_window()
+
+# Scorll by pixel value
+---------------------------
+
+driver.execute_script("window.scrollby(0,1000)","")
+
+# Scroll by visible element:
+------------------------------
+
+flag=driver.find_element_by_xpath("//*[@id='content']/div[2]/div[2]/table[1]/tbody/tr[86]/td[1]/img")
+
+driver.execute_script("argument[0].scrollintoView();",flag)
+
+# Scroll by page end:
+--------------------------
+
+driver.execute_script("window.scrollby(0,document.body.scrollHeigh)")
+
+
+

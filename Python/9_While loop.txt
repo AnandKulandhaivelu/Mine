@@ -1,0 +1,78 @@
+#------------------------
+#  While Loop
+#------------------------
+
+'''
+    - Iterate the condition is true.
+    - We can use string, list, tuple, dictionaries.
+    - use the condition to terminate or come out the loop.
+'''
+
+# Example:
+x=0
+while x <=10:
+    print(x)
+    x=x+1
+
+
+# Example of string:
+city="Kalambur"
+x=0
+y=len(city)
+
+while (x<y):
+    print(city[x])
+    x=x+1
+
+# Example of list:
+
+value=[10,20,30,40,50]
+x=0
+
+while x<len(value):
+    print(value[x])
+    x=x+1
+
+
+# Example of Tuple:
+t1=(10,20,30,40)
+x=0
+
+while x<len(t1):
+    print(t1[x])
+    x=x+1
+
+
+# Example of Dictionaries:
+
+D1= {1:10,2:20,3:30,4:40}
+x=1
+
+while x<len(D1):
+    print(D1[x])
+    x=x+1
+
+
+# Break and Continue class in While loop:
+# Break -- it will break out of the process in nearest loop
+# Continue -- it will continue the nearest loop condition
+
+x=0
+
+while x<=10:
+    print(x)
+    x=x+1
+    break
+
+while x<=10:
+    print(x)
+    x=x+1
+    continue
+
+# Else class in While loop:
+
+while x<=10:
+    print(x)
+    x=x+1
+else:
+    print("This is out side of loop")

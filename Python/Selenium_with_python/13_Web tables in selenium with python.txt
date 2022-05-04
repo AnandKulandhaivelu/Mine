@@ -1,0 +1,30 @@
+------------------------
+Working with web tables
+------------------------
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("file:///C:/Users/matrix/Desktop/Class/Python/Selenium_with_python/table.html")
+
+rows=len(driver.find_element_by_xpath("/html/body/table/tbody/tr"))
+
+cols=len(driver.find_element_by_xpath("/html/body/table/tbody/tr[1]/th")
+
+print(rows)
+print(cols)
+
+print("Person1"+"   "+"Person2"+"   "+"Person3")
+
+for r in range(2,rows+1): // rows
+  for c in range(1,cols+1): // columns
+	value=driver.find_element_by_xpath("/html/body/table/tbody/tr["+str(r)+"]/td["+str(c)+"]").text() // it will print data from table
+	print(value,end="   ") // like table alingement
+
+  print()
+driver.close()

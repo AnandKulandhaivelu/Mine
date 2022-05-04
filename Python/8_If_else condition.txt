@@ -1,0 +1,13 @@
+#------------------------------
+# IF_ElSE
+#------------------------------
+
+score=95
+if score > 90 :
+    print("you will get Motorbike")
+elif score > 80 and score < 90:
+    print("you will get Bicycle")
+elif score > 70 and score < 80:
+    print("you will get something")
+else:
+    print("You will get nothing")

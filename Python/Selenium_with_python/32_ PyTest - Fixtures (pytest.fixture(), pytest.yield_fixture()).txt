@@ -1,0 +1,13 @@
+import pytest
+
+@pytest.yield_fixture()
+def setup():
+    print("this is before")
+    yield
+    print("this is after")
+def test_one(setup):
+    print("this is first method")
+
+def test_two(setup):
+    print("this is first method")
+

@@ -1,0 +1,58 @@
+-----------------------------------
+Dropdowns in selenium with python
+-----------------------------------
+
+1) we need to select only one options
+2) Capture all the option is available in dropdown
+3) count how many options present
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407")
+
+
+# Select the option using select method
+--------------------------------------------
+
+element=driver.find_element_by_id("RESULT_RadioButton-9")
+drp=select(element)
+
+# select_by_visible_text
+---------------------------
+
+drp.select_by_visible_text("Morning")
+
+# select_by_index
+----------------------
+drp.select_by_index(2)
+
+# select_by_value
+----------------------
+
+drp.select_by_value("Radio-2")
+
+
+# count the number of options:
+----------------------------------
+
+print(len(drp.option))
+
+
+# Print the number of options:
+----------------------------------
+
+all_options=drp.option
+
+
+for option in all_options:
+	print(option)
+
+

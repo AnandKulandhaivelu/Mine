@@ -1,0 +1,36 @@
+----------------------------------------------------
+Download files using chrome in selenium with python
+----------------------------------------------------
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import Actionchains
+from selenium.webdriver.chrome.options import Options
+import time
+
+
+chrome_option=options()
+chrome_option.add_experimental_option("prefs",("download.default_directory":"c:\Downloadedfiles"))
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe",Chrome_options=chrome_option)
+
+driver.get("http://demo.automationtesting.in/FileDownload.html")
+
+driver.maximize_window()
+
+Download text files:
+--------------------------
+
+driver.find_element_by_id("textbox").send_Keys("Download text file")
+driver.find_element_by_id("createTxt").click()
+driver.find_element_by_id("link-to-download").click()
+
+Download pdf files:
+--------------------------
+
+
+driver.find_element_by_id("pdfbox").send_Keys("Download PDF file")
+driver.find_element_by_id("createPdf").click()
+driver.find_element_by_id("pdf-link-to-download").click()
+

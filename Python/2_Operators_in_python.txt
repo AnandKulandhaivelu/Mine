@@ -1,0 +1,94 @@
+Operators in python:
+-------------------------
+1) Arithematic operators
+2) Assingment operators
+3) Relations / comparision operators
+4) Logical operators
+5) Membership operators
+6) Identity operators
+
+
+1) Arithematic operators:
+-----------------------------
+"+","-","*","/","**","//","%"
+
+
+a=10, b=20
+
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a**b)
+print(a//b)
+print(a%b)
+
+
+2) Assignment operators:
+-------------------------
+=, +=,-=,==,*=,/=,**=
+
+a=10
+
+print(a)
+print(a+=10)
+print(a-=10)
+print(a/=10)
+
+3) Relations / Comparision operators:
+---------------------------------------
+<,>,<=,>=,==,!=
+
+a=10, b=20
+
+print(a<b)
+print(a>b)
+print(a==b)
+print(a!=b)
+print(a<=b)
+print(a>=b)
+
+4) Logical Operators:
+---------------------------
+and, or, not
+
+
+a=10, b=20
+
+
+if a>b and b>=20:
+	print(a)
+else
+	print(b)
+
+if a>b or b>20:
+	print(a)
+else
+	print(b)
+if a not b :
+	print(a)
+
+5)Membership operators:
+---------------------------
+
+(in, notin)
+
+l=[10,20,30,40]
+
+
+print ( 10 in l)
+
+print( 90 not in l)
+
+6) Identity operators:
+----------------------------
+
+(is, isnot)
+
+
+a=10, b=10
+
+print( a is b)
+print (a isnot b)
+
+

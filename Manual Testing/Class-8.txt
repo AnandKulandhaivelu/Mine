@@ -1,0 +1,101 @@
+Test data Design:
+------------------
+
+What is Test plan and what it is contains?
+	
+Test plan : 
+------------
+	The test plan describe the scope of the test.
+	It contains what to test and how to test and when to test.
+	the test plan contains Scope of test, roles and resp, test envirnoment, test excutions,etc,.
+
+what is usecase / testcase / test scenarios?
+ 
+Use case:
+------------
+	It describe the requirments / functionalities.
+	It seems like data flow chart. for clearly explain the requirements.
+
+Test case:
+------------
+	Test the software with step by step execution.
+	It describe how to test the software
+	
+Test scenarios:
+----------------
+	Test Scenarios describe What to test in the applications.
+	Test scenarios contain more test cases.
+
+what is test suite?
+
+Test suite:
+-------------
+	More and same categerios of test cases are grouped it is called as test suite.
+	Like sanity test related test cases are group , regresstion test related test case group
+
+what is test case what it is contains?
+
+Test case : 
+------------
+	It describe step by step test the application
+	It tells about how to test application
+	It contains test case id, test case description, pre-conditions, excepted result, acutual result,sevority, piriority
+
+what is RTM?
+
+	RTM - Requirements Traceability Matrix
+	----------------------------------------
+
+It is help to found all the functionality are convered under test or not
+
+	It contains  Req_id, Req_description,test case_id,Status of Test cases.
+
+Tell about test Environment?
+	Test Envionment:
+	-----------------
+		It is the replica of customer/ production environment.
+		tester will test their envirnoment.
+		It describe what are the component are need to test the software like hardware, software etc.
+
+Tell about test execution?
+	Test Execution:
+	----------------
+		It is the process of executing all the apporved test cases.
+		In this execution tester will found the test case status whether it is passed or failed.
+		If incase any test found defect/ bug means tester will report it to developers
+		
+What is Defect / Bugs?
+	Defect / Bugs:
+	-----------------
+		It is process of describe what is excepted result and what is actual result.
+		The defect and bug are identified by tester. while test execution
+
+what is Defect Reporting contains?
+	Defect Reports:
+	-----------------
+		It is the reports for contains the defect details. 
+		It is contains def_id, Def_description, Def_status,seviority,Priority of the defect.
+
+Categories of Defect?
+
+	Defect are categories like four different ways:
+	
+		High severity and High piriority - After click login button getting new blank page
+		High severity and low piriority  - After click about us page getting new blank page
+		Low severity and high piriority  - While enter the Home page found spelling mistake in Home page text.
+ 		Low severity and low piriority	 - While enter the about us page found spelling mistake in about us text.
+
+What is Defect Resolutions and types?
+		
+	Defect Resolutions:
+	--------------------
+		It is the process of the developer arrange the meeting with testing team how the bug or defect going to arrested.
+		Get clear knowledage about the defects.
+		While giving the resolutions of the defects there are different type statements used.
+		accept, Reject,duplicate,need more information,enhachments,closed.
+		Based on the developer status the bug is processed.
+		After sloved all the bug status only the product is ready to lanuch in customer environment.
+
+
+
+

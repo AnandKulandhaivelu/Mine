@@ -1,0 +1,92 @@
+#--------------------------
+# Inheritance in python
+#--------------------------
+
+'''
+    - Inheritance help to access the values which is defining from parent class to child class
+'''
+
+class parent(): # Declaring parent class
+
+    def __init__(self):
+        print("This is from parent class")
+
+    def parent(self): # Parent method
+        print("parent money")
+
+
+class child(parent): # Declaring child class with parent class inhert
+
+    def __init__(self):
+        print("This is from child class")
+
+    def child(self): # Child method
+        print("child money")
+
+
+c=child() # Creating instance of child class
+c.child() # Calling child instance
+c.parent() # Calling parent methods using child class instance.
+
+
+#----------------------------------
+# Multiple Inheritance in python
+# ---------------------------------
+
+x=input("Enter the value : ")
+class move_obj():
+    def move_fwd(self):
+        print(x+" Move forward")
+
+    def move_bck(self):
+        print(x+" Move backward")
+
+class jump_obj():
+
+    def jump_up(self):
+        print( x+ " Jump up")
+
+    def jump_down(self):
+        print(x+ " Jump down")
+
+class micky(move_obj,jump_obj):
+    pass
+
+s=micky()
+s.jump_up()
+s.move_fwd()
+
+# Find out Method Resolution Orber in Inheritance
+print(micky.mro())
+
+
+#------------------------------------
+# Multilevel Inheritance in python
+#------------------------------------
+
+class move():
+
+    def forward(self):
+        print("Moveing forward direction")
+
+    def backward(self):
+        print("Moveing backward direction")
+
+class jump(move):
+
+    def jump_up(self):
+        print("Jumping Up")
+
+    def jump_down(self):
+        print("Jumping down")
+
+class jervious(jump):
+    pass
+
+j=jervious()
+j.forward()
+j.backward()
+j.jump_up()
+j.jump_down()
+
+

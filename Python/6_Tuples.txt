@@ -1,0 +1,48 @@
+#--------------------------------
+#    Tuples
+#--------------------------------
+
+'''
+    - Tuples are indexed
+    - Tupleas allows duplicate values
+    - Tuples are immutable
+'''
+
+# Declaration of tuples
+demo=(1,2,3,4,5)
+print(demo)
+demo1=("hai","hello")
+print(demo1)
+demo2=(1,2.5,"value")
+print(demo2)
+
+# findng length of tuples
+
+print(len(demo))
+print(len(demo1))
+print(len(demo2))
+
+# fetching values from tuples based on index
+
+print(demo[0])
+print(demo1[1])
+print(demo2[2])
+
+
+#----------------------
+#Tuples methods
+#----------------------
+#   All the list methods we can use Tuples also
+
+#count
+print(demo.count(1))
+#index
+print(demo1.index("hello"))
+#fetching value using for loop
+for i in demo2:
+    print(i)
+#join tuples
+joined_tuple=demo+demo1
+print(joined_tuple)
+#find data type
+print(type(joined_tuple))

@@ -1,0 +1,53 @@
+project location : C:\Users\matrix\PycharmProjects\seleniumhybridframework
+
+
+=================
+Git bash comment
+=================
+
+
+1) Create local respositories:
+   --------------------------------
+	git init --> initialze empty repositories in local
+
+2) Connect local to global(github)
+   -----------------------------------
+
+	Github link : https://github.com/AnandKulandhaivelu/projectnopcommerce.git
+
+	git remote add origin https://github.com/AnandKulandhaivelu/projectnopcommerce.git
+
+3) First time only we need to execute below comment:
+  -----------------------------------------------------
+  	git config -- global user.name "Anand Kulandhaivelu"
+  	git config -- global user.email "anandvelu.k@gmail.com"
+
+
+4) Get status of the Git:
+   ----------------------------
+	git status --> Know the files commit status
+
+
+5) Add all the code into Staging Area:
+   ------------------------------------
+    	git add -A --> Add all files to Index or Staging Area in Local git.
+
+6) Commit code into git repository (Local git):
+   ----------------------------------------------
+  	git commit -m "first commit"
+
+7) Push the code from git to github repository:
+   -----------------------------------------------
+	git push -u origin master
+
+
+8) Download All files from git hub to local git:
+   ----------------------------------------------
+ 	git pull
+
+9) After the change done we need to push file again to Git hub:
+   ----------------------------------------------------------------
+	git add -A
+	git commit -m "Commit command"
+	git push -u origin master
+	 

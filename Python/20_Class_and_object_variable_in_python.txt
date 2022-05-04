@@ -1,0 +1,44 @@
+#----------------------------------------
+# Class variable and Instance variable
+#----------------------------------------
+
+'''
+Class variable:
+    - Class variable are common for all the instance/ object
+    - It can be accessed by all the objects in the class
+Object variable:
+    - Object variable are only used for with the object.
+'''
+
+# calculating rate_of _interest using calss and object variables
+
+
+# Using Object variable:
+class ROI:
+
+    def __init__(self,amount,interest):
+        self.amount=amount
+        self.interest=interest
+
+    def calu_roi(self):
+        print("Interest rate is ", self.amount*self.interest)
+
+
+p1=ROI(10000,0.06)
+
+p1.calu_roi()
+
+# Using Class variable:
+
+class ROI:
+    interest = 0.04
+    def __init__(self, amount):
+        self.amount = amount
+
+    def calu_roi(self):
+        print("Interest rate is ", self.amount * ROI.interest)
+
+
+p1 = ROI(10000)
+
+p1.calu_roi()

@@ -1,0 +1,41 @@
+---------------------------------------------
+Radio and Check boxes in selenium with python
+---------------------------------------------
+
+1) Verify selected or not
+2) Click method
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407")
+
+# Works with Radio buttons:
+------------------------------
+
+status=driver.find_element_by_id("RESULT_RadioButton-7_0").is_selected() // False
+print(status)
+
+
+driver.find_element_by_id("RESULT_RadioButton-7_0").click()
+
+
+status=driver.find_element_by_id("RESULT_RadioButton-7_0").is_selected() // True
+print(status)
+
+# Works with Checkboxes:
+---------------------------
+
+status=driver.find_element_by_id("RESULT_CheckBox-8_0").is_selected() // False
+print(status)
+
+
+driver.find_element_by_id("RESULT_CheckBox-8_0").click()
+
+
+status=driver.find_element_by_id("RESULT_CheckBox-8_0").is_selected() // True
+print(status)

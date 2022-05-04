@@ -1,0 +1,77 @@
+-----------------------------
+Datadriven test case:
+------------------------------
+
+	- Read the data from excel
+	- Write the data into excel
+
+These are the common things we need to do while done Datadriven testing:
+
+	-count rows
+	-count column
+	-read the data
+	-write the data
+
+
+xslsUtlies.py Modules:
+----------------------
+
+import openpyxl
+
+def getRowcount.(file,sheetName):
+	workbook = openpyxl.load_workbook(file)
+	sheet=workbook.get_sheet_by_name(sheetName)
+	return(sheet.max_row)
+
+def getColumnCount(file,sheetName):
+	workbook = openpyxl.load_workbook(file)
+	sheet=workbook.get_sheet_by_name(sheetName)
+	return(sheet.max_column)
+
+def readData(file,sheetName,rownum,columnno):
+	workbook = openpyxl.load_workbook(file)
+	sheet=workbook.get_sheet_by_name(sheetName)
+	return sheet.cell(row=rownum,column=columno).value
+
+def writeData(file,sheetName,rownum,columnno,data):
+	workbook = openpyxl.load_workbook(file)
+	sheet=workbook.get_sheet_by_name(sheetName)
+	return sheet.cell(row=rownum,column=columno).value=data
+	workbook.save(file)
+	
+
+
+
+
+
+from selenium import webdriver
+
+driver=webdriver.Chrome(executeable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("http://newtours.demoaut.com/")
+
+driver.maximize_window()
+
+path="c://SeleniumPractice/Login.xlsx"
+
+rows=xslsUtlies.getRowCount(path,'Sheet1')
+
+for r in range(2,rows+1):
+    username=xslsUtlies.readData(path,"Sheet1",r,1)
+    password=xslsUtlies.readData(path,"Sheet1",r,2)
+
+    driver.find_element_by_name("userName").send_Keys(username)
+    driver.find_element_by_name("password").send_Keys(password)
+
+    driver.find_element_by_name("login").click()
+
+    if driver.title=="Find a Flight Mercury Tours:":
+	print("Test Passed")
+	xslsUtlies.writeData(path,"Sheet1",r,3,"test passed")
+
+    else:
+	print("Test failed")
+	xslsUtlies.writeData(path,"Sheet1",r,3,"test failed")
+
+
+    driver.find_element_by_link_text("Home").click()

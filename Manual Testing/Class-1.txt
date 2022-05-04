@@ -1,0 +1,64 @@
+1) What is Software? Types of Softwares?
+
+	- A software is the collection of programs which help to slove daily human work / automate the human work 
+    Types :
+	1) System software (Drivers, OS)
+	2) Programming software (Interperter)
+	3) Application Software ( Web application,Mobile Apps,Desktop Apps)
+
+2) What is Software Testing?
+
+	- Software testing is part of Software development process
+	- software testing is use to deliver Quality product to end user
+	- Main moto of software testing is find out the defect/ bug in software.
+
+
+3) What is Software Quality?
+
+	Software quality mainly focus on 5 creteria's:
+	
+	1) Bug free product
+	2) Deliver the product to ontime
+	3) It must be with in budget
+	4) It must be met end user exceptations and requerments
+	5) It must be Maintainability ( user friendly)
+	
+	The quality of the software must be met these certeria's.
+
+4) Differance between Project and Product
+
+	Project:
+		The software has been created or focus for particular users / Group of users requirments. Then it is called project
+	
+	Product:
+		The software has been created or focus for Multiple people / based on the market requirments. Then it is called product.
+
+
+5) Why do we need Testing?
+	
+	Testing help to found,
+
+	1) human mistaks, 
+	
+	2) deliver quality of product to end users.
+	
+6) Differance between Error, Bug/Defect, Failure
+
+	Error:
+		Error is Incorrect Human mistakes
+	
+	Bug/Defect :
+		
+		Based on the requirment we get enexcepted results. It didn't met required results.
+
+	Failure:
+		It produce unexcepted result in the cutomer enviroments.
+
+
+7) Why the Software has bug?
+
+	- Misscommunication between developers and testers
+	- Lack of the skilled tester
+	- Programming errors
+	- More complex software
+	- frequently changning the requirments.

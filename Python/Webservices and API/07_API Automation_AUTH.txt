@@ -1,0 +1,31 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+#-----------------
+# Authorization
+#-----------------
+
+# It will authorize the end point with the given value is valid it will proceed further with 200 code or 
+# else it will return as unauthorized error with code 401
+
+
+
+
+# import requests
+#
+# resp=requests.get("https://the-internet.herokuapp.com/basic_auth",auth=('admin','admin'))
+#
+# print(resp.status_code)
+#
+# output:
+# --------
+# 200 - OK / Success
+#
+# resp=requests.get("https://the-internet.herokuapp.com/basic_auth",auth=('jkjk','kjjh'))
+#
+# print(resp.status_code)
+#
+# output:
+# ----------
+# 401 - Unauthorized

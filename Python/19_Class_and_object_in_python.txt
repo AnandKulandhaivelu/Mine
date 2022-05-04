@@ -1,0 +1,51 @@
+#-------------------------------
+# Class and objects in python
+#-------------------------------
+
+'''
+Class:
+    - It's like a Blue-print of the building or programming
+    - It's have lot of object and attributes in it.
+
+Object:
+    - It's like attribute of class
+    - In the help of class we can create multiple objects
+
+'''
+
+class employee: # Class defining
+    # Defining attributes of class
+    def __init__(self,fname,lname,email):
+        self.fname=fname
+        self.lname=lname
+        self.email=email
+
+    def greet(self):
+        print("Hello! Welcome " + self.fname)
+
+# Create instance of the class
+emp1=employee("Anand","K","ak@mail.com")
+emp2=employee("sample","one","so@mail.com")
+
+# Outputs of the class
+print(emp1.fname)
+print(emp2.lname)
+
+emp1.greet()
+emp2.greet()
+
+# find out the area of rectangle using class and objects
+
+class rect:
+
+    def __init__(self,l,b):
+        self.l=l
+        self.b=b
+    def cal(self):
+        return self.l*self.b
+
+area1=rect(10,8)
+area2=rect(70,20)
+
+print(area1.cal())
+print(area2.cal())

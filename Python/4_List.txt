@@ -1,0 +1,73 @@
+#----------------------
+#   List
+#----------------------
+
+"""
+ - List are used to store multiple datatype values
+ - List contains Duplicate values
+ - In list basically we use to find values with the help of Index
+"""
+# Defining List
+a=[1,2,3,4,5]
+print(a)
+
+b=['India','Aus','Pak','USA']
+print(b)
+
+c=[1,'Value1',2,3.0]
+print(c)
+
+#find the type
+print(type(a))
+print(type(b))
+print(type(c))
+
+#print the value based on the Index
+
+print(a[0:2])
+print(b[1:4:2])
+
+# list Methods:
+'''
+list.append(x)
+list.insert(i,x)
+list.remove(x)
+list.pop(i)
+list.index(x)
+list.count(x)
+list.sort(x)
+list.reverse()
+list.copy()
+list.clear()
+'''
+
+team=['CSK','RCB','SRK','MUMBAI','KOLKATA']
+print(team)
+# list.append(x) - Append the new values in lost of the list
+team.append('LUKNOW')
+print(team)
+# list.insert(i,x) - Insert the new value in list based on the index given
+team.insert(1,'PUNJAB')
+print(team)
+# list.remove(x) - Remove the first matched value in list
+team.remove('MUMBAI')
+print(team)
+# list.pop(i) - Pop will remove the value based on the given index
+team.pop(1)
+print(team)
+# list.index(x) - Find out index value of particular given value in list
+print(team.index('SRK'))
+# list.count(x) - Return the given values occurances
+print(team.count('CSK'))
+# list.sort(x) - Sort the list
+team.sort()
+print(team)
+# list.reverse() - reverse the list
+team.reverse()
+print(team)
+# list.copy() - copy of the list
+new=team.copy()
+print(new)
+# list.clear() - clear the values in list
+new.clear()
+print(new)

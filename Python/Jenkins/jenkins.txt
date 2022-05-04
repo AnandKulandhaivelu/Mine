@@ -1,0 +1,236 @@
+==============================
+Jenkins and Jenkins Pipe-line
+==============================
+
+Jenkins is Continous Intergration and Continous Delivery tools
+
+Before Jenkins:
+----------------
+
+	-The developer right the code and send to Gitup respository and then made the build. Then, the
+Build delevery to tester to test the code. then the software move to Production environment.
+	
+	- It will deliver the product in delay
+	
+	- Customer will not get immediatly the product 	
+
+After Jenkins:
+--------------
+
+	-Jenkins is tool to intergrate all code and make Build and test then deliver to tester to test
+software if there is bug tester will report to the developer.else the software move to 
+production. This process happen continusly. there is no delay to deliver the product.
+
+	- If there is error in build the CI server immediately report to developer to fix
+
+	- Customer easliy get software immediatly
+	
+	- It is open source product there is no need license.
+
+
+
+Feature in Jenkins:
+-----------------------
+
+	- Easy installation
+	- Easy confirguration
+	- More Plugins
+	- More Extensions
+	- Distibuted easily
+
+Jenkins Pipeline:
+------------------
+
+	- As a developer commit the code first
+	- Then, jenkins get the commited code and 
+	- Create a build with that
+	- Then, Test will be done within jenkins pipeline
+	- Then, relese process initiated
+	- After that deploy/deliver the product to customer
+	- In this process happen continusly.
+
+
+Jenkins Architecture:
+----------------------
+
+developer--> source-code repository--> CI server--> Build server(maven)--> Test serverr-->production server
+
+
+Master-slave Architecture:
+--------------------------
+
+Github server--> Master(jenkins server)--> Master distributed the list worklod to jenkins slave based on operating server
+
+
+
+
+Continous integration process:
+------------------------------
+
+Developer  ----> Devops tem<--------Tester
+(source code	(Create bulid)    (source code
+   resp)      ( CI Tool jenkins)	resp)
+
+
+
+Continous Deliver process:
+---------------------------
+Get   --> Release to customer
+Build
+
+
+Build is contain lot of jobs(Events)
+
+
+
+
+Entire pipeline devided as four differnet level:
+
+Build--> Depoly-- > Test --> Relese
+
+ever stage depence on previouse stage here.
+
+all the process happen continously.
+
+How to setup Build pipelline in Jenkins:
+-----------------------------------------
+
+1) Chian required jobs in sequence Add upstream/Downstream jobs
+
+2) Install Build pipeline Plugin
+
+3) Add
+	- Build Pipeline view
+	- configure the view step
+
+4) Run and validate
+
+How to build Piplines with Groovy scripts/jenksins:
+---------------------------------------------------
+1) Scripted
+2) Declarative
+
+
+single Pipeline job:
+
+	build  (stage 1)
+	deploy (stage 2)
+	test   (stage 3)
+	release(stage 4)
+
+
+pipeline concept:
+----------------------
+
+It contains all keywords like,
+
+	- Pipeline 
+	- Node
+	- Stage
+	- Step
+
+
+
+
+1) Scripted Pipeline:
+----------------------
+	node 
+		{
+	   
+	   stage('Build')
+		{
+	 	  echo "Building the project...."
+		}
+	   stage('Test')
+		{
+	 	  echo "Testing the project...."
+		}
+	   stage('Deploy')
+		{
+	 	  echo "Deploying the project...."
+		}
+	   stage('Release')
+		{
+	 	  echo "Release the project...."
+		}
+		
+		}
+
+2) Declarative Pipeline:
+-------------------------
+
+	- Jenkins files also part of Gitup repository where our project.
+
+pipeline
+	{
+	agent any
+	stage('Build')
+	{
+	 echo"Building the project...."
+	}	
+	stage('Test')
+	{
+	 echo "Testing the project...."
+	}
+	stage('Deploy')
+	{
+	 echo "Deploy the project...."
+	}
+	stage('Release')
+	{
+	 echo "Release the project...."
+	}
+
+	}
+
+
+Create build for the project in Github resp:
+---------------------------------------------
+
+
+pipeline
+	{
+	agent any
+	stages
+	{
+	stage('Build')
+	{
+	steps{ 
+	echo"Building the project...."
+	bat "mvn clean"
+	}
+	}	
+	{
+	stage('Test')
+	{
+	steps{ 
+	echo"Testing the project...."
+	bat "mvn test"
+	}
+	}
+	{
+	stage('Compile')
+	{
+	steps{ 
+	echo"Complie the project...."
+	bat "mvn compile"
+	}
+	}
+	{
+	stage('Deploy')
+	{
+	steps{ 
+	echo"Deploy the project...."
+	bat "mvn Deploy"
+	}
+	}
+	}
+	}
+
+
+
+
+
+
+
+	

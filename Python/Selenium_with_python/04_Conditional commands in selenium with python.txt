@@ -1,0 +1,51 @@
+# Conditional commands in selenium with python:
+#----------------------------------------------
+
+'''
+    - is_displayed() --- Use for any element
+    - is_enabled()  -- Use for any element
+    - is_selected() --Use for check box, radio button, drop-down box
+    
+'''
+'''
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+driver.get("http://newtours.demoaut.com/") // it will open the given URL
+print(driver.title)
+
+# Username fields are enabled or not and is displayed or not
+
+ele=driver.find_element_by_name('username') # find the element by id 
+print(ele.is_displayed()) # return ture or false
+print(ele.is_enabled()) # return ture or false
+
+
+# Password fields are enabled or not and is displayed or not
+ele1=driver.find_element_by_name('password') # find the element by id 
+print(ele1.is_displayed()) # return ture or false
+print(ele1.is_enabled()) # return ture or false
+ 
+# Enter the values in username and password field
+ele.send_keys('mercury')
+ele1.send_keys('mercury')
+
+# Click the login button
+driver.find_element_by_name('login').click() # click method use to select the button
+
+# check the status of round_trip radio button
+round_trip_radio=driver.find_element_by_css_selector("input[value=roundtrip])"
+print(round_trip_radio.is_selected()) # print status of the roundtrip radio button
+
+# check the status of oneway trip radio button
+one_trip_radio=driver.find_element_by_css_selector("input[value=onewaytrip])"
+print(one_trip_radio.is_selected()) # print status of the oneway radio button
+
+
+# close the browser
+driver.quit()
+'''

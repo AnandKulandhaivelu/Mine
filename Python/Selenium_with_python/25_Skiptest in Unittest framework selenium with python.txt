@@ -1,0 +1,33 @@
+-----------------------------------------------------------
+Skiptest in unittest frame work in selenium with python
+----------------------------------------------------------
+
+-Skipping tests
+	- Skip Test
+	- Skip Test with reason
+	- Skip Test with Based on condition
+
+
+import unittest
+
+class apptest(unittest.Testcase):
+	
+	@unittest.sKipTest
+	def test_searchgoogele():
+		print("This is google test")
+	
+	@unittest.skip("This is unwanted test case now")
+	def test_searchgmail():
+		print("This is googlemail test")
+	
+	@unittest.skipIf(1==1,"Number is not allowed here")
+	def test_searchbing():
+		print("This is bingtest")
+
+	
+	def test_searchfacebook():
+		print("This is facebook test")
+
+
+if__name__="__main__":
+	unittest.main()

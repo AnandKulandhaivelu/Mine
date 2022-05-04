@@ -1,0 +1,30 @@
+--------------------------------
+Alerts in selenium with python
+--------------------------------
+
+" It kind of Pop-up"
+	
+	-switch_to_alert().accept()
+	-switch_to_alert().dismiss()
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://testautomationpractice.blogspot.com/")
+
+
+driver.find_element(By.xpath,"//*[@id='HTML9']/div[1]/button").click()
+
+time.sleep(5)
+
+driver.switch_to_alert().accept() // It will close alert window by clicking OK
+
+driver.switch_to_alert().dismiss() // It will close alert window by clicking CANCEL
+

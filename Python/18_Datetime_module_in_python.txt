@@ -1,0 +1,25 @@
+#----------------------------------
+# Datetime module in python
+#----------------------------------
+
+import datetime
+
+# To find cureent date and time
+
+current_datetime=datetime.datetime.today()
+print(current_datetime)
+
+# To find current date
+
+currnet_date=datetime.datetime.today().date()
+print(currnet_date)
+
+# To find current time
+
+current_time=datetime.datetime.today().time()
+print(current_time)
+
+# formatted date and time
+
+filename=current_datetime.strftime('%Y-%m-%d-%H-%M-%S-%f')
+print(filename)

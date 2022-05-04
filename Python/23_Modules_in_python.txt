@@ -1,0 +1,25 @@
+# ---------------------------------
+# Modules in python
+#----------------------------------
+
+'''
+    - Modules are help to reduce coding
+    - there are lot of build in modules avaliable and we can also create our module
+'''
+
+# refer.py module
+'''
+def fun1():
+    print('fun1')
+def fun2():
+    print('fun2')
+
+'''
+# gather.py
+
+# import or calling modules
+from my_module import refer
+
+refer.fun1() # calling methods from importing module
+refer.fun2()
+

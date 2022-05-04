@@ -1,0 +1,38 @@
+# Navigation commands:
+# --------------------------------
+'''
+    forward
+    back
+
+'''
+
+
+'''
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import time
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+driver.get("http://www.facebook.com/") // it will open the given URL
+print(driver.title)
+
+driver.get("http://www.Google.com/")
+print(driver.title)
+
+driver.back()   # going back to history of last page
+print(driver.title)
+
+time.sleep(5)
+
+driver.forward() # Going forward to next page of history
+print(driver.title)
+
+time.sleep(5)
+
+print(driver.current_url)
+
+driver.close()  # It will close the current browser. Close one browser at time
+
+driver.quit() # It will closes the all the browser.
+'''

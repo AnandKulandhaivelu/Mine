@@ -1,0 +1,63 @@
+Data types in python:
+---------------------------
+
+1) Number
+2) sequence
+3) dictionary
+4) boolean
+
+Number data type:
+-------------------
+	Number data type is immutable data type.
+int------> x=10
+float----> x=10.05
+complex--> x+10j
+
+isinstance function:
+----------------------
+	to check wheather it is depends on particular datatype or not
+
+	a=10
+
+ex: print(isinstance(int a))
+
+	output : true
+
+Type converstion:
+-------------------
+
+	- In type conversion we can change one type of data to another type
+
+ex : 	a=10  int
+	
+	print(str(a)) // converting int to str
+	print(type(a)) // print the type of variable
+	
+	output : str
+
+Random module:
+--------------------
+	- In this random module we can able to access or print random value within the given data limit.
+
+ex: 	print(random.random(1-10))
+	
+	first time : o/p 2
+	second time : o/p 5
+
+	print(random.choice[10,20,30,40])
+	o/p :10
+	o/p:20
+	
+	print(random.sample([10,20,30,40],3))
+	o/p : (10,20,30)
+	o/p : (10,50,40)
+
+Max,min,len functions:
+------------------------
+	l=[10,100,30,40,500]
+
+	print(max(l))--->500
+	print(min(l))---->10
+	print(len(l))----->5
+
+

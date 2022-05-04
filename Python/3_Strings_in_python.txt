@@ -1,0 +1,98 @@
+Strings in python:
+--------------------------
+	- It is sequence of characters / Collections of characters
+
+Different way of representing strings in python:
+-------------------------------------------------
+1) single quotes
+	
+	- 'hai'
+	
+2) double quotes
+
+	- "hai"
+
+3) triple quotes / multiline quotes
+
+	- ''' hai
+	      hello
+	  '''
+
+Different types of print statements:
+------------------------------------------
+1) print f:
+--------------
+
+	print( "%s version is %d",("python",2.7))
+
+	o/p: python version is 2.7
+
+2) Automatice field numbering:
+----------------------------------
+
+lang= "python"
+version= 2.7
+
+	print( %s version %d,(lang,version))
+	
+	o/p : python version is 2.7
+
+3) Positional formatting:
+---------------------------
+
+print({0} version is {1}.format(lang,version))
+
+o/p : python version is 2.7
+
+4) Keywords formatting:
+-------------------------
+
+print ("{a} version is {b}.format(a=lang, b=version))
+
+o/p : python version is 2.7
+
+5) F strings:
+----------------
+
+print( f"{lang} version is {version})
+
+o/p : python version is 2.7
+
+
+
+Indexing in python:
+--------------------------
+
+	- indexing in python for featching char value based on the index.
+	- forward index 
+	- backward index
+
+forward index:
+----------------
+	- it is like positive value
+
+ex : a m a z o n
+     0 1 2 3 4 5
+
+backward index:
+------------------
+	- it is like negative value
+
+ex :  a m a z o n
+     -6-5-4-3-2-1
+
+
+Slicing in python:
+---------------------
+
+	- getting subset of element value 
+	
+ex:   s=a m a z o n 
+    	0 1 2 3 4 5
+
+	print (s[0:5])
+	print(s[0:3])
+	print(s[-1:-4])
+	print(s[2:6])
+
+

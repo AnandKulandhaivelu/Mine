@@ -1,0 +1,31 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+#------------
+# PUT Method
+#------------
+
+# PUT - Update / replace
+#         records exits means it will update or else it will create the records
+
+# IT will return for 200 status code for UPDATED records
+
+
+
+
+# import requests
+#
+# payload= {
+#     "name": "morpheus",
+#     "job": "zion resident"
+# }
+#
+# resp=requests.put("https://reqres.in/api/users/2",data=payload)
+# print(resp.status_code)
+# print(resp.json())
+#
+# output:
+#----------
+# 200
+# {'name': 'morpheus', 'job': 'zion resident', 'updatedAt': '2022-04-20T01:33:48.468Z'}

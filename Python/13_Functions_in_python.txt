@@ -1,0 +1,36 @@
+#----------------------
+# Functions
+#----------------------
+
+'''
+    - Function are used to reduce repeate coding
+
+'''
+
+# Defining the function
+
+def fun1():
+    print(10+20)
+
+# Calling the function
+
+fun1()
+
+# Using arguments in functions
+
+def func1(x,y):
+    print(x+y)
+
+func1(10,20)
+func1(45,15)
+
+# Using login methods sample
+
+def login(name,pwd):
+    if name == 'Anand' and pwd == 1234:
+        print("Welcome Screen")
+    else:
+        print("Try valid login credentials")
+
+login('Anand',1234)
+login('Anand',123)

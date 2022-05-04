@@ -1,0 +1,38 @@
+#--------------------
+#  For loop
+#--------------------
+
+# for loop in string:
+city="Chennai"
+for c in city:
+    print(c)
+
+# for loop in list
+x=[10,20,30,40]
+for i in x:
+    print(i)
+
+# for loop in tuple:
+y=(50,60,70,80)
+for j in y:
+    print(j)
+
+# for loop in set:
+z={10,20,30,40}
+for i in z:
+    print(i)
+
+# for loop in Dictionaries:
+dict={1:10,2:20,3:30,4:40}
+for i in dict.items():
+    print(i)
+
+# nested for loop:
+country= ("india","singapore","usa","china")
+value=(1,2,3,4)
+
+for i in country:
+    print(i)
+    for i in value:
+        print(i)
+

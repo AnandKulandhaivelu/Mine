@@ -1,0 +1,100 @@
+# Strings declaration:
+
+x = "this is double quotes"
+y = 'this is single quotes'
+
+# strings are array in python
+print(x[0])  # t
+
+# How to print single qutoes and double quotes:
+z = " this is 'Double qutoes'"
+
+m = 'this is "single quotes"'
+
+# Get value of string using index
+print(m[0:5])  # this
+
+# Multiline string
+c = """
+   This is 
+   Multiline string
+
+"""
+# Membership operatos in string
+
+print('is' in c)  # True
+
+# String Methods in python programming:
+# ------------------------------------------
+
+x = "python developer"
+print(x.find('py'))
+print(x.index('dev'))
+num = 1234567
+# len(s) - to find length of the string
+print(len(x))
+# str() - to convert any data type into string data type
+print(type(num))
+v = (str(num))
+print(type(v))
+# upper() - convert upper case character of strings
+print(x.upper())
+# lower() - convert lower case character of strings
+print(x.lower())
+# count() - count substring value in given string
+print(x.count('e'))
+# isupper() - found given string is upper case or not
+print(x.isupper())
+# islower() - found given string is lower case or not
+print(x.islower())
+sam = "   !@# sample #@!   "
+# split() - split the string based on the value
+print(sam.split())
+# rsplit() - spilt the string based on the value from right side
+print(sam.rsplit())
+# strip() - remove the given values from the string
+print(sam.strip(''))
+# lstrip() - remove the given values from left side
+print(sam.lstrip())
+# rstrip() - remove the given values from right side
+print(sam.rstrip())
+r = 'new'
+# replace() - replace the old string with the help of new string
+print(r.replace('new','old'))
+# find() - find the values in string based on the index
+print(x.find('dev'))
+# index() - find the values in string based on the index.if the index is not there it throw error.
+print(x.index('dev'))
+
+#----------------------
+#string slicing:
+#-----------------------
+
+''' 
+s[i,j] # slicing with start and end value
+s[i,j,k] slicing with start and end value with steps
+'''
+
+s= "Welcome to testing world"
+print(s[0])
+print(s[0:-1])
+print(s[2:7])
+#with steps:
+print(s[2:20:2])
+# revers the string:
+print(s[ : :-1])
+
+#---------------------
+# String formatting
+#----------------------
+
+class_name ='python'
+study='online'
+
+print("Welcome to "+ class_name +' '+ study +" class")
+
+print("welcome to %s on %s"%(class_name,study))
+
+print("welcome to {} on {}".format(class_name,study))
+
+print("welcome to {value1} on {value2}".format(value1=class_name,value2=study))

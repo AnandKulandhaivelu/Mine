@@ -1,0 +1,32 @@
+# Web driver basic commends:
+#------------------------------
+
+'''
+    Basic webdriver commands
+    Capture title of the page
+    Capture URL of the page
+    Closing & quitting browes
+    
+'''
+'''
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import time
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+driver.get("http://www.facebook.com/") // it will open the given URL
+
+print(driver.title)
+
+print(driver.current_url)
+
+driver.find_element_by_xpath("//*[@id='Tabbed']/a/button").click() # click the button using xpath.
+time.sleep(5)
+
+driver.close()  # It will close the current browser. Close one browser at time
+
+driver.quit() # It will closes the all the browser.
+
+
+'''

@@ -1,0 +1,48 @@
+-------------------------------
+Frames in selenium with python
+-------------------------------
+
+	-switch_to.frame(name)
+	-switch_to.frame(id)
+	-switch_to.frame(index)
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html")
+
+
+driver.switch_to.frame("packageListFrame") # first frame
+
+driver.find_element_by_link_text("org.openqa.selenium.chrome").click()
+
+time.sleep(3)
+
+
+
+driver.switch_to.default_content() # select default page
+
+
+
+driver.switch_to.frame("packageFrame") # second frame
+
+driver.find_element_by_link_text("WebDriver").click()
+
+time.sleep(3)
+
+
+
+driver.switch_to.default_content()
+
+
+
+driver.switch_to.frame("classFrame") # Third frame
+
+driver.find_element_by_link_text("Deprecated").click()
+

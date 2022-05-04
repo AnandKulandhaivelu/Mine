@@ -1,0 +1,28 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+
+#----------------------
+#    TIME OUT or DELAY
+#----------------------
+
+# Within the given time the response will come or else it will return error as time out.
+
+
+
+# import requests
+#
+#  r=requests.get("https://httpbin.org/delay/3",timeout=5)
+#  print(r.status_code)
+#
+#  Output:
+#  ---------
+#  200
+#
+# r=requests.get("https://httpbin.org/delay/5",timeout=3)
+# print(r.status_code)
+#
+#  Output:
+#  ----------
+#  Read timed out. (read timeout=3)

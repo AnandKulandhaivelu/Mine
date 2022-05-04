@@ -1,0 +1,30 @@
+----------------------------------
+Assertion in Selenium with python
+----------------------------------
+
+(assertEqual, assertNotEqual)
+
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertEqual("Google",title)
+		self.driver.close()
+
+	def test_google(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertNotEqual("Google123",title)
+		self.driver.close()
+
+
+if__name__="__main__":
+   unittest.main()
+

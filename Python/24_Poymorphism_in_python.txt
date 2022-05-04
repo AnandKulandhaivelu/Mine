@@ -1,0 +1,138 @@
+#----------------------------
+# Polymorphism in python
+#-----------------------------
+'''
+    - It deinf one thing as many form
+    - It define different functionality/behaviour of objects
+    - There are 4 different types of polymorphism in python
+    - Duck typing
+    - Operator overloading
+    - Method overloadig
+    - Method overriding
+'''
+
+# Duck Typing:
+#---------------
+
+class pycharm():
+    def execute(self):
+        print("Compling")
+        print("executing")
+
+ide=pycharm()
+
+
+class myeditor():
+    def execute(self):
+        print("spell check")
+        print("error check")
+        print("compliing")
+        print("executing")
+ide= myeditor()
+
+class laptop():
+
+    def code(self,ide):
+        ide.execute()
+
+
+lap1=laptop()
+lap1.code(ide)
+
+
+
+# Operator overriding:
+#------------------------
+
+
+class stu():
+    def __init__(self,s1,s2):
+        self.s1=s1
+        self.s2=s2
+
+    def __add__(self, other):
+
+        s1=self.s1+other.s1
+        s2=self.s2+other.s2
+        return s1 +s2
+
+    def __gt__(self, other):
+        s1=self.s1+self.s2
+        s2=other.s1+other.s2
+        if s1>s2:
+            return True
+        else:
+            return False
+
+
+
+s1=stu(100,20)
+s2=stu(30,40)
+
+s3=s1+s2
+
+print(s3)
+
+if s1>s2:
+    print('s1 win')
+else:
+    print('s2 win')
+
+
+
+# Method overloading:
+#------------------------
+
+class student():
+    def sum(self,a,b,c):
+        self.a=a
+        self.b=b
+        self.c=c
+
+    def sum1(self,a=None,b=None,c=None):
+        s=0
+        if a!=None and b!=None and c!=None:
+            return a + b + c
+        elif a!=None and b!=None:
+            return a+b
+        else:
+            return a
+
+
+s1=student()
+s4=s1.sum1(10,20,20)
+
+print(s4)
+
+# Method overriding:
+#----------------------
+
+class A:
+    def show(self):
+        print("This is A show")
+
+class B(A):
+    def show(self):
+        print("This is B show")
+    pass
+a1=B()
+a1.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

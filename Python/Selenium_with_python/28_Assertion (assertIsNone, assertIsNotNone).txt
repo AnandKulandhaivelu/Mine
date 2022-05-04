@@ -1,0 +1,38 @@
+----------------------------------
+Assertion in Selenium with python
+----------------------------------
+
+(assertIsNone, assertIsNotNone)
+
+
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google1(self):
+		driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.assertNone=driver
+		self.driver.close()
+
+	def test_google2(self):
+		driver=None
+		#driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.assertNone=driver
+		self.driver.close()
+
+	def test_google3(self):
+		driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.assertIsNotNone=driver
+		self.driver.close()
+
+	def test_google4(self):
+		driver=None
+		#driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.assertIsNotNone=driver
+		self.driver.close()
+
+
+if__name__="__main__":
+   unittest.main()

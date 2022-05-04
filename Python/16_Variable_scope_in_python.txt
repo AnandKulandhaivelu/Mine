@@ -1,0 +1,47 @@
+#---------------------------
+#  Variable scope in python
+#---------------------------
+
+'''
+    - Variable scope is tells about Boundry level of variables
+
+'''
+
+# Local
+#Global
+# Global Keyword
+# LEGB rule L->Local,E->Enclosing,G-Global,B->Bulit-in
+
+#Local:
+
+def sample():
+    x=20
+    print(x)
+
+# Global:
+x=20
+def sample1():
+    print(x)
+
+# Global Keyword:
+def sample2():
+    global x
+    x=20
+    print(x)
+
+# LEGB Rule:
+
+x=100 # Global variable
+def parent(): # Parent function
+    x=50      # Enclosing vaiable of Child function
+    print(x)
+    def child(): # Child function
+        x=40     # Enclosing variable of Grand_child function
+        print(x)
+
+        def grand_child(): # Grand_child function
+            x=20           # Local variable of grand_child function
+            print(x)
+        grand_child()
+    child()
+parent()

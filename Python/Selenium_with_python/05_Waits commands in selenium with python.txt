@@ -1,0 +1,105 @@
+# Waits commands in selenium with python:
+#------------------------------------------
+
+'''
+    - Implicit wait -- it applicable to all elements on the page.
+                    -- we can give with only one time in code
+                    -- it allows maximum 10 sec
+                    
+    - Explicit wait -- It based on the condition
+                    -- it only used for particular elements.
+    
+'''
+
+'''
+    -Syncrination probelm in web automation
+     
+'''
+
+'''
+        Implicit wait
+    ------------------------------
+
+
+
+
+
+from selenium import webdriver
+
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+driver.get("http://newtours.demoaut.com/") // it will open the given URL
+
+driver.implicitly_wait(10)---seconds
+
+assert "Welcome: Mercury Tours" in driver.title // verify the page title
+
+driver.find_element_by_name('username').send_keys('mercury') // username enter
+driver.find_element_by_name('password').send_keys('mercury') // password enter
+
+driver.find_element_by_name('login').click() // click signin button
+
+driver.close() // close the browser.
+
+        
+
+            Explicit wait
+        ------------------------
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from selenium.webdriver.support import expected conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+# open the URL
+driver.get("https://www.expedia.co.in/") 
+
+# Click flight button using Xpath
+driver.find_element(By.xpath,"//*[@id='wizardMainRegion']/div/div/div/div/ul/li[2]/a/span").click
+
+driver.implicity_wait(10)
+
+# Selecting from location using Xpath
+driver.find_element(By.xpath,"//*[@id='wizard-flight-tab-roundtrip']/div[2]/div[1]/div/div[1]/div/div/div/div[1]/button").click
+
+# Selecting To location using Xpath
+driver.find_element(By.xpath,"//*[@id='wizard-flight-tab-roundtrip']/div[2]/div[1]/div/div[2]/div/div/div/div[1]/button").click
+
+#Clear the from date 
+driver.find_element(By.xpath,"//*[@id='d1-btn']").clear()
+
+# Selecting From date
+driver.find_element(By.xpath,"//*[@id='d1-btn']").send_keys(10/10/2021)
+
+# Clear the return date
+driver.find_element(By.xpath,"//*[@id='d2-btn']").clear()
+
+# Selecting return date
+driver.find_element(By.xpath,"//*[@id='d2-btn']").send_keys(15/10/2021)
+
+# Click the search button
+driver.find_element(By.xpath,"//*[@id='wizard-flight-pwa-1']/div[3]/div[2]/button").click()
+
+# Click the checkbox using expilcity_waits
+
+wait=webDriverWait(driver,10)-- It wait for max 10 sec to find out the element present or not in website.
+
+element=wait.until(EC.element_to_be_clickable(By.xpath,"//*[@id='stops-0']"))
+element.click()
+
+# wait some time
+time.sleep()
+
+# close the entire browser
+driver.quit()
+
+
+'''

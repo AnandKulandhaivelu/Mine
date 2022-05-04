@@ -1,0 +1,86 @@
+What is Defect life cycle?
+ 
+Defect cycle is the process of maintain or follow the defects.
+There are several stages of defect mention in software testing 
+	1) new    - Starting / Initial stage of defect.
+	2) Accept - Developer accept the Defect and move further
+	3) Reject - Developer reject build based on the requirment spec.
+	4) Duplicate - Developer will consider this is a duplicate defect based on bug fixing
+	5) Assinged - This stage developement manager will assign accept defect to developer
+	6) Open     - This stage is developer will work on the particular defect.
+	7) Fixed    - This stage is developer will fix the bug and move further testing.
+	8) Close    - This stage is tester will close the defect based on defect fixing and regression testing.
+
+What is Test closure / When to stop the testing?
+ 
+Test closure is the process of stop the testing.
+In the test closure tester will gather the information about all the requirements are test with written test cases report.
+and also defect clustering report for defect level. these are report submmited to the management about the test closure.
+
+deliverables:
+	Test closure report
+	test metrics
+
+Software testing metrics?
+
+based on the data we will calculated the test metrics:
+
+1) no of requirments
+2) total number of the testcase
+3) no of test case executed
+4) no of test case not executed
+5) no of test case passed
+6) no of test case failed
+7) no of test case blocked
+8) total no of defect identified
+9) critical defect report
+10) high level defect report
+11) low level defect report
+12) customer defects
+13) no of the defects found in UAT.
+
+
+we will find out:
+	1) % test case executed
+	2) % test case not executed
+	3) % test case passed
+	4) % test case failed
+	5) % test case blocked
+	6) DRE ( FD/ FD+MD)*100.(defect removal effeciency)
+	7) Defect leakage ( UAT defect / testing defect)*100
+	
+	
+QA/Testing activities?
+
+	1) Understandes the requirements
+	2) Identifies the requireds scenarios
+	3) Test case design 
+	4) setup environment
+	5) Test execution
+	6) log test results
+	7) defect reporting and tracking
+	8) perform various level of testing in application
+	9) team meeting
+	10)create automation test
+
+Priniples of software testing?
+
+	1) Star the software test in early stage
+	2) test the software in order to find the defects
+	3) highly impossible to give the bug free product to customer
+	4) should not do exhaustive testing ( same type of data used for testing)
+	5) Decide what type of testing need to conduct for application
+	6) if same set of test case executing logner means we didn't get defect. need to upgrade the test cases.
+	7 follow defect clustering.
+
+
+
+
+
+
+
+
+
+
+
+

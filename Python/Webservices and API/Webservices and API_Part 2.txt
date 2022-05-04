@@ -1,0 +1,160 @@
+--------------------------------------
+web service and API Testing Part 2
+--------------------------------------
+
+15) Web services API Testing Process
+=========================================
+	1) API Specification Review
+	2) Developer implement the code for api
+	3) franework development
+	4) Testcase development
+	5) Test execution and reporting
+
+
+REST services: 
+===============
+post- Create data
+get- select data
+put- update data
+delete- Delete data
+
+CRUD method
+
+
+URI- Uniform resource Intergrator
+
+URL contains URI and path parameters and query parameters
+
+Paylod- Data is called as Payload in API.
+
+Domain- The physical server where you website is hosted ex : www.google.com
+
+
+Demo:
+======
+
+using https://reqres.in/ site.
+
+
+GET:
+========
+List of user find :
+=====================
+
+ Request : https://reqres.in/api/users?page=2
+
+ Response :{"page":2,"per_page":6,"total":12,"total_pages":2,"data":
+
+[
+
+{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},
+{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},
+{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},
+{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},
+{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},
+{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}
+
+],
+"support":{"url":"https://reqres.in/#support-heading",
+"text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}
+
+Response status code :200
+
+POST:
+=======
+ Request : https://reqres.in/api/users
+			{
+    				"name": "morpheus",
+    				"job": "leader"
+			}
+
+
+ Response : 
+	    {
+    		"name": "morpheus",
+    		"job": "leader",
+    		"id": "168",
+    		"createdAt": "2022-04-19T22:52:37.763Z"
+	   }
+
+Response staus code : 201
+
+
+PUT:
+=======
+ Request : https://reqres.in/api/users/2
+			{
+    				"name": "morpheus",
+    				"job": "leader"
+			}
+
+
+ Response : 
+	    {
+   		 "name": "morpheus",
+    		 "job": "zion resident",
+    		 "updatedAt": "2022-04-19T22:54:59.281Z"
+	   }
+
+Response staus code : 200
+
+
+DELETE:
+=======
+ Request : https://reqres.in/api/users/2
+
+
+ Response status code : 204
+
+
+
+Status codes : 
+=================
+
+100 - Continue
+101 - Switching Protocol
+102 - Processing (webdev)
+102 - Early hints
+200 - OK
+201 - Created
+202 - Accepted
+203 - Non-Authoritative Information
+204 - No content
+205 - Reset content
+206 - Partial Content
+207 - Multi-status (webdev)
+208 - Already reported(webdev)
+226 - IM Used
+301 - Moved Parmanetly
+302 - Found
+303 - See other
+304 - Not Modified
+307 - Temporary Redirected
+400 - Bad request
+401 - Unauthorized
+403 - Forbidden
+404 - Not found
+405 - Method not allowed
+406 - Not Acceptable
+412 - Precondition failed
+500 - Internal server Error
+501 - Not Implemented
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

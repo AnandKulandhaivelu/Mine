@@ -1,0 +1,64 @@
+Tell about your self:
+
+	My self anand. i am from tamilnadu. i have 4 years of experiance. i complete work on
+web based application with API and manual.
+
+What do you mean by API?
+	
+How do you do API Testing?
+
+your hitting req and your getting proper resp means need to verify status code.
+
+401 is for what is status code and tell me something about this.
+
+401- unauthorized
+
+	We just put authoriztion key to reslove the unauthorized error.
+
+	invalid access token. and passed it in header.
+
+when will you get 404. how will you slove the issue?
+
+	400 - bad request.
+	403 - Forbidden.
+	404 - Not found.
+		- check the website link is correct or not.
+		- need to check with developer given URL.
+
+
+Have you face andy 500 serious api testing?
+
+	504- Gate way time 
+		Api in queue and  some crashes on the application
+	
+	500 - Some app error
+		 Responding with some exceptions. go to application log findout code breaking.
+
+Have you ever use header in API Testing?
+
+How will you test new feature added application?
+
+what is hard fix?	
+	find the defect in high environemt. need to ask developer to fix the bug. and then
+move to QA envirnoment.
+
+high envirnoment like: (UAT, demo)
+
+What is Bug leakage?
+	
+	bugs are find out in UAT that is called Bug leakage.
+
+sprint days - 2 weeks in 10 days.
+	
+do you right test case for API testing?
+		
+
+what is mean by fatal defects?
+	it is other name for blocker defects
+
+advantage of testcase desing technqiues?
+	
+	boundry value analysis
+	error guessing
+	equalance class partitioning.
+	

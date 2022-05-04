@@ -1,0 +1,147 @@
+Software testing:
+--------------------
+It is the process of testing actual funalitity of the software.
+In the software testing we test actual software.
+Based on the four different testing level we test the software
+	- GUI Testing
+	- Usability Testing
+	- Functional Testing
+	-Non Funtional Testing
+
+
+GUI Testing:
+----------------
+- In GUI testing we test UI of the application.
+- We mainly test UI elements.
+- UI elements are placed correctly or not.size of the elements,spelling,position,color etc.
+- As per SRS document the elements are presented or not.
+- GUI is the user interface so, this is the main think to attracting the user.
+
+Usability Testing:
+------------------
+- In this Usability Testing we mainly focus on how easiliy educate the customers about the software
+- We main test the Help button and help button functionalities.
+- It is like user manual for helping the customer to know the software very well.
+
+Functional testing:
+----------------------
+- In this testing is the most important phase in software testing.
+- We actual test the functionality of the software whether it is stable or not.
+
+There are various level of testing will be done in Functional testing.
+	- Objects properties testing
+	- Database testing
+	- Error handing testing
+	- calculation / Manupulation testing
+	- Link existance / Link Execution
+	- Cookies and Session Testing.
+
+
+Object properties testing:
+---------------------------
+	- In this testing we mainly focus on properties of the object / Elements.
+	- The elements fields are working correct or not.
+	- Wheather it allows only requirements base input or not.
+	- In object testing found objects are placed correctly and correct size or not.
+
+Database testing:
+---------------------
+	- In the Database testing mainly focus on Database DML functions.
+	- The DML functions like Create, Update, Delete, Select.
+	- Wheather it will be done two levels one is front end part and other one is back end part.
+	- Data base testing is called as gray box testing( Because the white and black box testing done in DB testing).
+	- We must check the data insertion and deletion and updatiion of the table level.
+
+Error handling Testing:
+------------------------
+	- In this testing found Error message or Error screen appear in correct manner or not
+	- to found , While giving incorrect data the Error screen or error message appearance.
+	- In this testing mainly use for user level of validation ( like username incorrect messages in log in screen).
+
+Calculation / Manipulation testing:
+-----------------------------------
+	- In this testing performed most finacial base application
+	- In this testing we mainly focus on wheather the application work calculation and produce correct output or not.
+
+Link Existance / Link Executions:
+----------------------------------
+	- In this Testing we found Link test present correct manner or not. If it is present means whather it is placed correct position in screen.
+	- While clicking the links wheather it goes to particular target page or not.
+	- While clicking the links the link test color changed or not
+	- In this testing mostly done in Web application and mobile application levels.
+
+Cookies / Sessions Testing:
+---------------------------
+   Cookies testing:
+   ----------------
+	
+	- In this cookies testing we need found wheather the given data stored in browser temporaly.
+	- The store data will help to sortout the user process.
+	- we need to check the cookies working correctly or not.
+	
+    Session testing:
+    -----------------
+	
+	- In this session testing we need found the session timestamp is working correctly or not.
+	- It help to secure the application
+	- Most of the secured application will not allow user to stay long time . In that scenarios we actually used Session testing.
+
+Non-Funtional Testing:
+---------------------------
+	After the complisation of the funcational testing we need to do non-functional testing.
+   In the non-functional testing,
+		1) Performance testing ( Load, Stress, Volume)
+		2) Security testing
+		3) Recovery testing
+		4) Compatability testing
+		5) Configration testing
+		6) Installation testing
+		7) sanitation / Garbage testing
+
+
+1) Performance testing:
+---------------------------
+	In this testing we mainly focus on application performance.
+This testing done in three different levels.
+	1) Load testing : In the load testing we gradualy increase the load to test the software stable or not
+	2) Stress testing : In this testing suddlly increase the load and decrease the load of the software to found wheather it is stable or not.
+	3) volume testing : In this testing we need to found how much volume of data will transfered to DB. How much volume of the data will reterived.
+
+2) Security testing:
+-------------------------
+	- In this security testing we mainly focuse on how the user data's are encrepted and decrepted.
+	- In this testing we need to do hacking level of techniques to prevent the software.
+
+3) Recovery testing:
+------------------------
+	- In this testing we found wheather the software recovery the data's easily or not.
+	- While sudden low of software also, how the data's are stored and recovered. we need to check the think
+	- For example Gmail Draft box.
+
+4) Compatability testing:
+-------------------------
+	- In this testing we found wheather the created application is sutiable for all type of environments.
+	- how the funcationality of application will work in other environument alos we need to check in this testing.
+
+5) Configration testing:
+-------------------------
+	- In this testing we found configuration of the software wheather if new release also support for older configration.
+	- We need to check how much RAM, Storage used for particular level of relesing software.
+	- configration testing mainly define how the setup will be the particular verision of software release.
+
+6) Installation testing:
+---------------------------
+	- In this level of testing we need to found wheather the installation process work correctly or not.
+	- In this testing we need to found installation screen appear correctly or not. wheather it's user friendly or not.
+	- In this testing we also uninstall the software wheather it remove all items are properly in system .
+
+7) Sanitation / Garbage testing:
+--------------------------------
+	- In this testing we need found wheather the software build only for the customer requirments.If there is any other features means
+	  we need to report to developers as a BUG.
+	- the unwanted features Identified  from the software it is called garbage / sanitation testing.
+
+
+
+
+

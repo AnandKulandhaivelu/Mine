@@ -1,0 +1,38 @@
+#---------------------------------------------
+# Selenium with python
+#---------------------------------------------
+
+# Run test on Chrome and Firefox & IE:
+#-------------------------------------------
+
+'''
+we need do download all webdrivers like Chrome, Firefox, IE drivers.
+save it in common place then only we use it easily
+we need to give the directories of these webdrivers in "Excuteable path" in selenium.
+'''
+
+
+'''
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+# Chrome brower:
+driver=webdriver.Chrome(executable_path='c:\Drives\chromdriver_win32\chromedriver.exe')
+
+# Firfox browser:
+driver=webdriver.Firfox(executable_path='c:\Drives\geckodriver_win32\geckodriver.exe')
+
+# Ie browser:
+driver=webdriver.Ie(executable_path='c:\Drives\IEDriverServer_win32_3.7.0\IEDriverserver.exe')
+
+
+driver.get("http://www.facebook.com/") // it will open the given URL
+
+print(driver.title) // it will print title of the home page
+
+print(driver.current_url) // it will print current url of page
+
+print(driver.page_source) // it will gives page html tags.
+
+driver.close()  // it will close the current brower.
+
+'''

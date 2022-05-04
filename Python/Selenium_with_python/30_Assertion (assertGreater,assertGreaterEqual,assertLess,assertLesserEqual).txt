@@ -1,0 +1,33 @@
+----------------------------------
+Assertion in Selenium with python
+----------------------------------
+
+(assertGreater,assertLess)
+
+
+
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google1(self):
+		
+		self.assertGreater(100,10)
+		
+	def test_google2(self):
+		
+		self.assertGreaterEqual(10,100)
+
+	def test_google3(self):
+		
+		self.assertLess(10,100)
+
+	def test_google4(self):
+		
+		self.assertLessEqual(100,10)
+
+
+if__name__="__main__":
+   unittest.main()

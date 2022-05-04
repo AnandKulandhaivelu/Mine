@@ -1,0 +1,176 @@
+1) What is SDLC? SDLC Modes?
+
+SDLC- Software Development Life Cycle
+
+	This is the process which is used for devloping software in software industry.
+	There is lot phases invovled in Software development process.which is Requirments analysis, design, impelementation,testing, maintanace.
+	
+	In software development process:
+	
+	- we first Analys the requirment from customers, 
+	- then design the software with the help of customers input,
+	- and then, Develop/ Implement the Software with the help of designing,
+	- Then, we will do Testing of the complete software with the help of SRS.
+	- Then we deploy the software in customer environment and maintain the softwares.
+
+
+	There are lot of Model we follow in SDLC Process.
+		
+		1) Waterfall model
+		2) Spiral Model
+		3) Vmodel( VV model)
+
+2) What is Waterfall model and advantages / Disadvantages of waterfall model?
+	
+	Water fall model:(Linear Model)
+	-----------------
+
+		- In this model we follow ever phases based on previous phase completitions
+		- It is look like waterfall
+		- Each and ever phase need Documents.
+		
+		
+		Requirment Analysis
+				
+				Desinging
+
+				      Implementation / Coding
+					  
+					  Testing
+
+						Deployment
+							
+							maintance
+
+	Advantages : 
+	-------------
+
+	1) Ever single phase depends on Previous phase only
+	2) Initial cost is low
+	3) Quality of product is good.
+	4) Since requirment changes not allowed finding bugs is less.
+	5) Suitable / prepared for Small projects.
+
+	Disadvantages:
+	---------------
+	
+	1) Requirments are not able to changing inbetween the process.
+	2) if any bug or Defect in previous level it will follow entire software implementation phases.
+	3) Testing will be done at only one time.
+	4) Rework cost is more.
+	
+3) What is Spiral model and advantages / Disadvantages of Spiral model?
+
+	Sprial model : (Iterative Model)
+	-----------------
+		- In this spiral model we  follow waterfall model in Every cycle.
+		- To overcome waterfall model drawback we moved to spiral model.
+		- In every cycle we release peace of software to customer.
+		- Testing will be done for every cycle.
+		- In this model sutiable for product base companies.
+
+
+	Advantages:
+	------------------
+	1) In Every single cycle we follow all the Water fall model process.
+	2) New requirments can be added after completing the cycle.
+	3) Testing will be done for every cycles.before move to new cycle.
+	4) Users also experiance the software in every cycle compeletions.
+	
+	Disadvantages:
+	--------------
+	1) Testing will be done only one time of this process
+	2) Requirment changes are done only the cyle completion. not in middle of the cycle.
+	3) In requirement and design phase there is no testing happen.
+
+
+4) What is V model and advantages / Disadvantages of V model?
+
+	V model:(VV Model / Verification and validation model)
+	----------
+
+		- It is also called as Verification and validation model.
+		- To overcome waterfall and spiral model we move to v model.
+		- In every phase, Testing will there in v model.
+
+			Verification						Validation
+		---------------------------				-----------------------
+			
+	BRS/CRS/URS( Bussiness requirment speics)			User Acceptance testing
+
+													Blackbox testing
+		SRS (Software requirment speics)			System tesing
+
+
+
+			HLD ( High level desing)
+									
+									Integeration Testing
+
+			LLD ( Low level desing)								Whitebox testing
+
+					
+				Coding					Unit testing
+					
+
+					
+	Advantages:
+	------------
+		1) Every Phase have testing / Reviews/ Walkthorws / Insepctions.
+		2) In this process we deliver quality of software to customer
+	
+	Disadvantages:	
+	--------------
+		1) Initial cost is very high
+		2) Documentation is more
+
+	
+5) what is Prototype model?
+		
+		Prototype : 
+		--------------
+		Prototype means it is blueprint of the entire softare.
+		In this model in every cycle we release peace of software to customer
+		This model comes between waterfall and spiral model.
+
+
+6) Differance between static and dynamic testing
+	
+	Static Testing						Dynamic Testing
+
+    1) In this testing conducting on Document level	  This testing condcuting on Software level
+	
+    2) This type of testing mainly focus on quality	  This type of testing mainly focus on quality of
+       of the Documents                                   the softwares
+
+    3) In this testing conducting verification		  In this testing conduction validation
+		Reviews / Walkthorws / Insepctions
+
+
+7) Differance between Verification and Validation
+	
+		Verification						Validation
+
+	1) Verify the Document level and design level process         validate the software and software outputs.
+
+	2) Verification contains BRS / SRS / HLD / LLD / Coding	      Validation contains Unit / Integerations / system / UAT Testing
+	
+	3) In verification we have Reviews/walkthorws/insepction      In validation we have metting with clients.
+	
+	4) Check whether we building the product right		      It take place after verification completed.
+
+
+	
+	
+
+8) Differance between Whitebox and Blackbox testing
+
+		Whitbox testing						blackbox testing
+
+	1) White box testing conducted by Developers			1) Blockbox testing conducted by Testers
+
+	2) In White box testing we have Unit, Integerating testing	2) Blockbox testing we have system, UAT testing
+
+	3) this testing conducted by code level				3) This testing coducted by design and output level.
+
+

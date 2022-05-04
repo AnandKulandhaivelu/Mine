@@ -1,0 +1,148 @@
+===========================
+Selenium Hybrid Framework
+===========================
+
+Framework:
+-------------
+
+	- Framework is an organized way of maintaining automation files
+	- In, the framwork all the files will communicate each other to perform certain task.
+
+Some of the practice could be:
+-------------------------------
+	
+	- Coding standards
+	- Handling test data
+	- Object repositories
+	- Storing test results
+	- Using external libraries
+
+Some of the benefits of test automation framework:
+---------------------------------------------------
+
+	- save time
+	- Ensure best practies are followed
+	- Lowcost to maintain
+	- Code reusability
+
+
+Types of Frameworks:
+----------------------
+
+1) Build in Framework:
+	- pytest,robot frame work,unittest etc...
+
+2) Customized / User defined framework:
+	- Datadriven frame work, Keyword driven framework, Hybrid driven framework.
+
+Phases:
+----------
+1) Analyze application and Technology and skill set of team then, choose the Testcases.
+
+	Why we need automation:
+       --------------------------
+		- Retest testcases
+		- Regresstion testcases
+		- What are the testcases automateable.
+
+
+2) Design and Implementation of framework
+
+3) Execution
+
+4) Maintanance (version control system).
+
+
+
+Selenium hybridframework:
+----------------------------
+
+step 1 : 
+---------
+	Create new project & install required packages and plugins
+		
+			- Selenium : selenium libraries
+			- pytest   : python unittest framework
+			- pytest-html: pytest html reports
+			- pytest-xdist: run tests parallel
+			- openpyxl : Ms excel support
+			- Allure-pytest : To generate allure reports
+
+
+
+step 2:
+---------
+	project name
+	
+		- pageobjects(package)
+		- testcases(package)
+		- utilities(package)
+		- testdata(floder)
+		- configurations(floder)
+		- logs(floder)
+		- screenshots(floder)
+		- report(floder)
+		- run.bat
+
+Step 3:
+---------
+	Automating Login testcase:
+		
+		- Create login page object class under "pageobject".
+		- Create login test under "testcase".
+		- Create conftest.py under "testcase".
+
+step 4:
+--------
+	capture screenshots on failures:
+		- Update login test with screenshots under "testcase".
+
+step 5:
+--------
+	Read common values from .ini files:
+		- Add config.ini file in configurations floder
+		- Create "readproperties.py" utility file under utilities package to read
+		common data
+		- Replace hard coded value in login test case.
+
+step 6:
+--------
+	Adding logs to testcases:
+		
+
+step 7:
+-------
+	Run the test in desired browser
+	Run the tests in parallel
+
+step 8 :
+--------
+	Generate pytest HTML Reports
+
+step 9:
+--------
+	Automating data driven testcases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

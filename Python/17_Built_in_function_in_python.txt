@@ -1,0 +1,55 @@
+#-----------------------------
+# Built in function in python
+#-----------------------------
+
+'''
+# max()
+# min()
+# iter()
+# reversed()
+# next()
+# slice()
+# sorted()
+# sum()
+# input()
+'''
+
+# max() -> Return maximum value
+demo=(8,9,7,4,2,1)
+x=max(demo)
+print(x)
+
+# min() -> Return minimum value
+demo=(8,9,7,4,2,1)
+x=min(demo)
+print(x)
+
+# iter()-> It will do step by step iteration
+demo=(8,9,7,4,2,1)
+x=iter(demo)
+print(next(x))
+print(next(x))
+
+# reversed() -> It will reversely give the value
+demo=(8,9,7,4,2,1)
+x=reversed(demo)
+print(next(x))
+
+# slice() -> It will slice the value based on the given values
+demo=(8,9,7,4,2,1)
+x=slice(2,5)
+print(demo[x])
+
+# sorted() -> It will sort the value retrun a list
+demo=(8,9,7,4,2,1)
+x=sorted(demo)
+print(x)
+
+# sum() -> Total of the item
+demo=(8,9,7,4,2,1)
+x=sum(demo,5)
+print(x)
+
+# input() -> Getting value from user
+x= input("Enter your name:")
+print("Welcome "+x)

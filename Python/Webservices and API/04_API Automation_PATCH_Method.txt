@@ -1,0 +1,29 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+#---------------
+# PATCH Method
+#---------------
+
+# Patch - Update / Modify
+#         It only Update or modify the records
+
+# IT will return for 200 status code for UPDATED records
+
+
+
+
+# import requests
+# payload = {
+#              "name": "morpheus",
+#              "job": "zion resident"
+#           }
+# reslut=requests.patch("https://reqres.in/api/users/2",data=payload)
+# print(reslut.status_code)
+# print(reslut.json())
+#
+# output:
+# ------------
+# 200
+# {'name': 'morpheus', 'job': 'zion resident', 'updatedAt': '2022-04-20T01:37:10.582Z'}

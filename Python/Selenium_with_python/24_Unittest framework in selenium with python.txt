@@ -1,0 +1,102 @@
+------------------------------
+Unittest frame work in python
+-----------------------------
+	- Organize our test case
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		print("Title of the page is: ",self.driver.Title)
+		self.driver.close()
+
+
+	def test_bing(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.bing.com")
+		print("Title of the page is: ",self.driver.Title)
+		self.driver.close()
+
+
+if __name__==__main__:
+	unittest.main()
+
+
+
+Keywords in Unittest frame works:
+-------------------------------------
+
+	-setup		- excute before testcase start
+	-teardown	- excute after testcase done
+	-setUpClass	- excute before all the test case start
+	-tearDownClass	- excute after all the test case done
+	-setUpModule	- excute before the module
+	-tearDownModule	- excute after the module done
+
+
+
+
+import unittest
+
+def setUpModule():
+	print("This is setUpModule")
+
+def tearDownModule():
+	print("This is tearDownModule")
+
+
+class Apptest(unittest.Testcase):
+
+	@classmethod
+	def setUpclass(self):
+		print("This is setupclass")
+
+
+	@classmethod
+	def tearDownClass(self):
+		print("This is teardownclass")
+
+	@classmethod
+	def setup(self):
+		print("This is setup method")
+
+	@classmethod
+	def teardown(self):
+		print("This is teardown method")
+
+
+	def test_search(self):
+		print("This is search test")
+
+	def test_close(self):
+		print("This is close test")
+
+
+if __name__==__main__:
+	unittest.main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

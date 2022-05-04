@@ -1,0 +1,93 @@
+Software Testing Techniques :
+--------------------------------
+
+1) What is Regression Testing?Type of Regression testing?
+
+Regression testing:
+-----------------------
+	Whenever develeoper release new build the tester test and report the bug to developer. based on the bug fix the developer
+	resend new build to testing. while testing new build we need to check wheather existing functionality are not affected 
+	during the bug fix. 
+
+	To check wheather existing functionality are stable or not during any changes in software. this type of testing called
+	Rrgressing testing.
+
+	Types:
+		1) Unit regression testing
+
+		2) Regional regression testing
+
+		3) Full regression testing
+
+
+	1) Unit regression testing:
+	-----------------------------
+		Check wheather the particular unit of application bug fix only.we no need to check all functionalities here.
+
+	2) Regional regression testing:
+	--------------------------------
+		Check the particular region of functionalities and wheather the functionalities bug fixes are not.and check other depended 
+		functions are working correct or not.
+
+	3) Full regression testing:
+	-------------------------------
+		We need to check wheather full functionality of the application and depended module working correctly are not and also we do testing
+		to found bug in full level software.
+
+2) What is Re-Testing?
+
+	Re-testing:
+	-------------
+		Re testing is the process of testing again and again the same functionalities. while reporting bugs to developer. developer fix the
+		Bugs correctly or not we need to found out that. based on the particular module.
+
+3) Difference between Somke and Sanity testing?
+
+	Smoke testing						Sanity testing
+	--------------						----------------
+	
+1) In this testing conducted initial level build		In this testing conducted stable build
+
+2) this testing done by tester and developer also		this testing only conducted by tester.
+
+3) Check wheather initial build installation, nevigation	Checking basic functonality of the appilication in initial level.
+
+4) It is under basic testing					It is under regresstion testing
+
+
+4) What is Exploratory testing?
+
+	To explore the functionality of the application with the help of previous experiance.
+	Identify the bug and report the bug with the help exploring the application without documentation.
+	This testing done in random level.
+	Drawbacks of this testing is We might consider bug as future and future as bug.
+	It takes time consuming also.
+
+5) What is Adhoc testing?
+
+	- In this testing we do random manner.It is informal testing
+	- Randomly test the software and found bug and report to developers.
+	-unplaned testing
+
+6) What is Monkey testing?
+
+	- This type of testing is mostly used in game application
+	- this is also test in random manner
+	- here and there check and report the bug for the developers.
+
+7) What is positive and negative testing?
+	- Positive testing : Giving positive input and found the system stability and output of the test.
+	- Negative testing : Giving negative input and found the system stability and output of the test.
+
+8) what is globalizationa and localization testing?
+
+	Globalization:
+			Check wheather the created software support globally. with global standards.
+
+	Localization:
+			Check wheather the created software support locally. with support locoal language support etc.
+
+9) What is End-to-End testing?
+
+	End-to-End testing : This type of testing is used to check full functionality of the software from top to bottom
+			     based on the full testing we need to report the bug report to developer for more stablization of software.

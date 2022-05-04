@@ -1,0 +1,51 @@
+-------------------------------------
+     Input boxes in python selenium
+-------------------------------------
+
+" provideing some value in the input fields"
+
+1) How to find how many input boxes present in webpage
+2) How to provide value input text boxs
+3) How to get the status of input boxes
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407")
+
+
+
+
+
+# How to find how many input boxes present in webpage
+
+inputbox=drive.find_elements(By.CLASS_NAME,'text_field')
+
+print(len(inputbox)) // It will return number of input fields present in the website
+
+
+
+
+
+# How to get the status of input boxes
+
+status=driver.find_element_by_id("RESULT_TextField-1").is_enabled()
+print(status)
+
+status1=driver.find_element_by_id("RESULT_TextField-1").is_displayed()
+print(status)
+
+
+
+
+# How to provide value input text boxs
+
+driver.find_element_by_id("RESULT_TextField-1").send_keys("Anand")
+driver.find_element_by_id("RESULT_TextField-2").send_keys("K")
+
+driver.find_element(By.id,"RESULT_TextField-3").send_keys("1234567")
+

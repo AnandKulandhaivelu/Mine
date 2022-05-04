@@ -1,0 +1,22 @@
+#-------------------------------
+# Generators in python
+#-------------------------------
+
+'''
+    - Generator functions is like normal functions
+    - Whenever we need to generate value with this function we need to use Yield keyword rather than return.
+    - The body of def containing yield keywords then it is called generators.
+
+'''
+
+def sample():
+    yield 1
+    yield 2
+    yield 3
+
+# for value in sample():
+#     print(value)
+x=sample()
+print(x.__next__())
+print(x.__next__())
+print(x.__next__())

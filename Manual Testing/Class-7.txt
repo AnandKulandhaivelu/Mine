@@ -1,0 +1,57 @@
+STLC- Software Testing Life Cycle
+--------------------------------------
+	- Software testing life cycle is one of the part of SDLC(Software Development Life Cycle)
+	- When the testing phase is started we need to apply for STLC process.
+
+STLC process have several parts:
+		1) Test planning
+		2) Test desing
+		3) Test execution
+		4) Bug / Defect reporting or tracking
+		5) Test closure
+
+
+1) Test planning:
+------------------
+	- This is first and for most process of the STLC process
+	- In this phase we come to now how the process flow is, and find out project time line, test execution time line, environment setup.
+	- In this test planning phase mainly involved project manager and team lead.
+	- Test plan main desing based on the FRS and project documents.
+	- Test planning focus on 
+			What to test,
+			How to test,
+			When to test.
+	
+2) Test desing:
+-------------------
+	- This is second step in STLC process.
+	- In this phase we know test scenarios and desing test cases.
+	- Test case and test scenarios designed based on project documents, FRS,Use cases, Design documents.
+	- In the test desing phase actual tesers and team lead involved.
+	- When the test case process done. we have meeting with team and lead for apporving the test cases.
+	- We need to create Requirment Tracable matrix (RTM) for found all the funcationality are covered under test.
+
+3) Test Execution:
+-------------------
+	- This is the Third step in STLC process
+	- In this phase we execute the approved or singoff testcases.
+	- The test excution process start when the envirnoment setup done
+	- The important aspect of the test execution is cover all tracable matrix scenrios.
+	- In this phase most of tester invovle for testing the application.
+
+4) Bug / Defect reporting:
+---------------------------
+	- This is the fourth level of step in STLC process.
+	- While executing testcases if any mismatch or unexcepting result produced by the software means we need to address the developer as bug.
+	- In this bug reporting process we maintain the data in seperatly. for raising bug valid / invalid and know bug status.
+	- In this phase most of the tester involve to report the bug.
+	- While reporting bug we get apporval for leads and managers.
+
+5) Test closuer:
+-------------------
+	- This is last phase of STLC process.
+	- While execution all the testcases and scenarios based on the requirement we need to submit the data to management.
+	- What is tested and how it is tested and when it tested.
+	- Based on the traceable matrix met we comeup with closer part.
+	- In this stage we produced tracable matrix data, bug reporting data to management.
+	- This stage also called as Test signoff.

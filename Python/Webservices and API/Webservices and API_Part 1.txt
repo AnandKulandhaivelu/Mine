@@ -1,0 +1,166 @@
+-----------------------------
+Web services and API Testing
+-----------------------------
+
+What is client and server?
+==================================
+Cilent:
+--------
+	- It is actually get data from server.
+	- request/ response the data
+Server:
+-------- 
+	- It is actually Database and processing the data
+	- It produce the data
+
+
+Client server architecture
+===============================
+	- One tier Architecture ( server and cilent available in same system)
+			example: Desktop Application
+	- Two tier Architecture ( server is locate some where and cilent located some place)
+			example: Cilent server Application
+	- Three tier Architecture ( server, client, Web server(Business logic)) 
+			example: Internet Application
+
+Presentation, Business and Database layers
+=============================================
+	- Presentation Layer (GUI Testing)
+		HTML5,Java Script,CSS
+	- Application Layer ( API Testing)
+		Java,c,c++,C#,Python
+	- Database Layer ( Data base Testing)
+		Mysql,Oracle,Sql,Mongu DB
+
+What is request and response
+=============================
+
+	Request:
+	---------
+		Acknowledage the server with the piece of input
+	Response:
+	---------
+		Receving msg or server will give some set of ouput based on the input.
+
+What is API
+=============
+	- API Means Application Programming Interface
+	- It help to communicate the data between two different software
+	- Business Logic will present like API's
+	- API will take request and response
+	- It act as a interface between presentation and database layer.
+	- Request as a input and Response as a output.
+
+What is API Testing
+==============================	
+	- Testing the Application Layer via request and response that is called as
+	API Testing
+
+API Testing Vs Unit Testing
+==============================
+
+	API Testing				Unit Testing
+     -----------------		    	    ---------------------
+	Tester will perform 			Developer will perform
+
+	End to End functional test		Separate function test
+
+	Tester cannot access the code		Developer can access the code
+	
+	only API Functions are test		UI Testing is also involved
+
+	All function tested			only basic function test
+
+	Broader is scope			Limited in Scope
+
+	It will run after the build		Usually ran before the build 
+	create					
+
+What is web service
+========================
+	- If the API is available means that is  called Web service
+	- Web service API mantitory need internet.
+	- It service over the web
+	- Communicate the application over web
+	- it provide standards format of communication
+	- Platform Indepent communication
+	example:
+		All the payment gate way using webservice( paypal,paytm,phonepy, google pay etc..)
+	like Zamato app work Scenario
+
+	There are two types of webservices:
+		- SOAP ( Simple Object Access Protocol)
+				- It only support POST
+				- It only support XML
+			
+		- REST ( REpresentational State Transfer)
+				- It support POST,GET,PUT,DELETE....
+				- It support XML/JSON/TEXT..
+
+
+	Service Provider: Who will provide API
+	Service Consumer: Who will Using API	
+	
+Difference between API and Webservices
+============================================		
+	Webservice is an API wrapped HTTP
+	
+	All Web Services are API but API are not Web services
+	
+	Web service might not perform all oprations that an API would perform
+	
+	A Web service need network while an API doesn't need a network for its operation.
+
+Components of Web services(WSDL & UDDI)
+===========================================	
+	WSDL: Web service Description Language
+
+		- It is normal in XML format files
+		- It Describe location of API and it describe how to access the API.
+		- SOAP service must have WSDL.
+
+	UDDI: Universal Description and Discovery and Integration
+		
+		- It contains Multiple WSDL.
+		- It is like Regiestry of contain all WSDL.		
+
+Types of Web services
+============================
+	SOAP web services - POST
+			  - XML format only support
+	RESTful web services - GET,POST,PUT,DELETE 
+			     - XML,HTML,JSON,TEXT.
+
+
+	GET: I want to retrive data from DB.
+	POST: We need to insert new data into DB.
+	PUT: Update the data in DB.
+	DELETE: Throw the API we delete the data in DB.
+
+
+	HTTP: Hypertext transfer protocol 
+		- This is not more sucure
+		- SOAP and RESTful used this protocol service
+		- No SSL
+
+	HTTPS: Hypertext transfer protocol secure
+		- This is secure 
+		- Use SSL
+
+Web services API Testing Tools:
+=====================================
+
+for Manual testing
+--------------------	
+	- SOAPUI
+	- POST MAN
+	- JMETER
+
+for Automation
+----------------
+	- REST-assured
+	
+
+
+
+

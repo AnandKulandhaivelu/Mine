@@ -1,0 +1,35 @@
+-----------------------------
+Workings with browser windows
+-----------------------------
+	
+	-driver.cureent_window_handle
+	-driver.window_handle
+
+ever windows having unique hexadecimal value that is called as "handles"
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("http://demo.automationtesting.in/Windows.html")
+
+
+driver.find_element_by_xpath("//*[@id='Tabbed']/a/button").click()
+
+print(driver.current_window_handel) // it will print parent window handle value
+
+handles=driver.window_handle // it will store all windows handle in handles variable
+
+for handle in handles:
+	driver.switch_to.window(handle)
+	driver.title()
+	if driver.title == "Frames & windows":
+	driver.close()
+
+driver.quit()
+

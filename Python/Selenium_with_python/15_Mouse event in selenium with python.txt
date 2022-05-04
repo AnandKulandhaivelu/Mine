@@ -1,0 +1,123 @@
+---------------------------------
+Mouse events selenium with python
+---------------------------------
+
+	- Moouse Hover
+	- Double Click
+	- Right Click
+	- Drag and Drop
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import Actionchains
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://opensource-demo.orangehrmlive.com/")
+
+driver.maximize_window()
+
+driver.find_element_by_xpath("//*[@id='txtUsername']").send_Keys("Admin") // username enter
+driver.find_element_by_xpath("//*[@id='divPassword']").send_Keys("admin123") // password enter
+driver.find_element_by_xpath("//*[@id='btnLogin']").click() // click login button
+
+
+admin= driver.find_element_by_xpath("//*[@id='menu_admin_viewAdminModule/b']")
+usermgnt=driver.find_element_by_xpath("//*[@id='menu_admin_UserManagement']")
+users=driver.find_element_by_xpath("//*[@id='menu_admin_viewSystemUsers']")
+
+actions=ActionChains(driver)
+
+actions.move_to_element(admin).move_to_element(usermgnt).move_to_element(users).click().perform()
+
+
+
+-------------
+Double Click
+-------------
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import Actionchains
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://testautomationpractice.blogspot.com/")
+
+driver.maximize_window()
+
+element=driver.find_element_by_xpath("//*[@id='HTML10']/div[1]/button")
+
+actions=ActionChains(driver)
+
+actions.double_click(element).perform()
+
+driver.quit()
+
+
+------------
+Right Click
+------------
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import ActionChains
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("http://swisnl.github.io/jQuery-contextMenu/demo.html")
+
+driver.maximize_window()
+
+
+element=driver.find_element_by_xpath("/html/body/div/section/div/div/div/p/span")
+
+actions=ActionChains(driver)
+
+actions.context_click(element).perform()
+
+driver.quit()
+
+
+--------------
+Drag and Drop
+--------------
+	we need to find Source and Target elements for this Drag and Drop Action.
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import ActionChains
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html")
+
+driver.maximize_window()
+
+source_element=driver.find_element_by_xpath("//*[@id='box6']")
+Target_element=driver.find_element_by_xpath("//*[@id='box106']")
+
+
+actions=ActionChains(driver)
+
+actions.drag_and_drop(source_element,Target_element).perform()
+
+driver.quit()
+
+
+
+

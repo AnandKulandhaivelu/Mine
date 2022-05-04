@@ -1,0 +1,46 @@
+----------------------------------
+Assertion in Selenium with python
+----------------------------------
+
+(assertTrue, assertFalse)
+
+
+
+import unittest
+from selenium import webdriver
+
+class serachengintest(unittest.Testcase):
+
+	def test_google1(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertTrue("Google",title)
+		self.driver.close()
+
+	def test_google2(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertFalse("Google123",title)
+		self.driver.close()
+
+	def test_google3(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertTrue("Google123",title)
+		self.driver.close()
+
+	def test_google4(self):
+		self.driver=webdriver.chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+		self.driver.get("www.google.com")
+		title=driver.title()
+		self.assertFalse("Google",title)
+		self.driver.close()
+
+
+
+if__name__="__main__":
+   unittest.main()
+

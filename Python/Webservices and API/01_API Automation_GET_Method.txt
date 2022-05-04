@@ -1,0 +1,58 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+GET METHOD :
+===============
+
+import requests
+
+resp=requests.get("https://reqres.in/api/users?page=2")
+
+# print(resp)
+# print(type(resp))
+# print(dir(resp))
+
+# How to capture the status code
+# code = resp.status_code
+# assert code == 201,"Code doesn't match"
+
+# print(resp.text)
+# print(resp.content)
+
+# print(resp.json())
+# print(resp.headers)
+# print(resp.cookies)
+# print(resp.encoding)
+
+print(resp.url)
+
+
+import requests
+
+p={"page":2}
+
+resp= requests.get("https://reqres.in/api/users",params=p)
+json_resp= resp.json()
+print(json_resp['total_pages'])
+assert json_resp['total_pages'] == 2,"Total pgae not found"
+
+print(json_resp["data"][0]["email"])
+assert json_resp["data"][0]["email"]=="michael.lawson@reqres.in","Email not found"
+assert (json_resp["data"][0]["email"]).endswith("reqres.in")
+
+print(json_resp["data"][2]["last_name"])
+assert json_resp["data"][2]["last_name"] !=None
+
+print(json_resp["support"]["url"])
+
+
+output : 
+----------
+2
+michael.lawson@reqres.in
+Funke
+https://reqres.in/#support-heading
+
+
+

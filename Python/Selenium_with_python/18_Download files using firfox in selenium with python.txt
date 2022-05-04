@@ -1,0 +1,42 @@
+----------------------------------------------------
+Download files using firfox in selenium with python
+----------------------------------------------------
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import select
+from selenium.webdriver import Actionchains
+import time
+
+fp=webdriver.FirefoxProfile()
+
+fp.set_preference("browser.helperApps.neverAsk.saveToDisk","text/plain,application/pdf")
+fp.set_prefernce("browser.download.manager.showwhenStarting",False)
+fp.set_prefernce("browser.download.dir","c:\Downloadedfiles")
+fp.set_prefernce("browser.download.folderList",2)
+fp.set_prefernce("pdfjs.disabled",True)
+
+
+
+
+driver=webdriver.firfox(executable_path="C:\Drivers\geckodriver-v0.23.0-win64\geckodriver.exe",
+			firefox_profile=fp)
+driver.get("http://demo.automationtesting.in/FileDownload.html")
+
+driver.maximize_window()
+
+Download text files:
+--------------------------
+
+driver.find_element_by_id("textbox").send_Keys("Download text file")
+driver.find_element_by_id("createTxt").click()
+driver.find_element_by_id("link-to-download").click()
+
+Download pdf files:
+--------------------------
+
+
+driver.find_element_by_id("pdfbox").send_Keys("Download PDF file")
+driver.find_element_by_id("createPdf").click()
+driver.find_element_by_id("pdf-link-to-download").click()
+

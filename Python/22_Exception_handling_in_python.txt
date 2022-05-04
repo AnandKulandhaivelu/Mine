@@ -1,0 +1,29 @@
+# -----------------------------------------
+# Exception handling in python
+#------------------------------------------
+
+'''
+    - Exception handing in python is use to handle the error
+    - we can raise the error while we got unrelated value
+    - there are methods like  TRY,EXCEPT,ELSE,FIINALLY and RAISE used in exception handling
+'''
+
+# Sample code for zero division error
+
+try:                      # Try block
+    print("Enter the 1st value :")
+    x=int(input())
+    print("Enter the 2nd value :")
+    y=int(input())
+    if y==0:
+        raise Exception ("Division by zero is not work") # Raise the exceptions
+    print(x/y)
+
+except Exception as e:  # Except block
+    print(e)
+
+else:                  # else block
+    print("This is not a zero division")
+
+finally:              # final block
+    print("This the final output")

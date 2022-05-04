@@ -1,0 +1,22 @@
+#--------------------
+#  Return function
+#--------------------
+
+'''
+    - It will retrun the processed values in functions
+'''
+
+def add(x,y):
+    """
+     This function about Adding two number
+    :param x: integer
+    :param y: integer
+    :return: return output of adding two numbers
+
+    """
+    return (x+y)
+#using variable
+z=add(20,40)
+print(z)
+#using print statement
+print(add(15,20))

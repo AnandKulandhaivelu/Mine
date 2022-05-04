@@ -1,0 +1,22 @@
+---------------------------------------------
+Taking screen shot using selenium with python
+---------------------------------------------
+
+	-save_screenshot()
+	-get_screenshot_as_file()
+
+
+from selenium import webdriver
+import time
+
+
+driver=webdriver.Chrome(executable_path="C:\Drivers\chromedriver_win32\chromedriver.exe")
+
+driver.get("https://opensource-demo.orangehrmlive.com/")
+
+
+driver.save_screenshot("C:\Users\matrix\Desktop\Class\Python\Selenium_with_python\screen.png")
+
+driver.get_screenshot_as_file("C:\Users\matrix\Desktop\Class\Python\Selenium_with_python\screen.png")
+
+

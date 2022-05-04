@@ -1,0 +1,28 @@
+--------------------------------
+Logging in selenium with python
+--------------------------------
+
+	- Ever event/action store in the log file
+	-Log levels:
+		-DEBUG
+		-INFO
+		-WARNING
+		-ERROR
+		-CRITICAL
+
+
+import logging
+
+logging.basicConfig(filename:"C:/Users/matrix/Desktop/Class/Python/Selenium_with_python/test.log"
+			      format=%(asctime)s:%(leveltime)s:%(message)s,
+			      datefmt='%m%d%Y%I :%M:%S:%p')
+
+logger=logging.getLogger()
+logger.setLevel(loggin.DEBUG)
+
+
+logger.debug("This is debug level")
+logger.info("This is info level")
+logger.warning("This is warning level")
+logger.error("This is error level")
+logger.critical("This is critical level")

@@ -1,0 +1,51 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+#-------------------
+#    POST Method
+#-------------------
+
+
+# import requests
+# # In POST method we create the record so, we will get status code as 201 for created
+# payload={
+#         "name": "Anand",
+#         "job": "Automation"
+#         }
+#
+# resp=requests.post("https://reqres.in/api/users",data=payload)
+# print(resp.status_code)
+# print(resp.json())
+
+#------------------------------------------------------------------------------------
+#
+# import json
+# import requests
+# mydata=open("data.json","r").read()
+# resp=requests.post("https://reqres.in/api/users",data=json.loads(mydata))
+#
+# print(resp.status_code)
+# print(resp.json())
+#---------------------------------------------------------------------------------
+# data.json
+# {
+#         "name": "Aanand",
+#         "job": "Tester"
+# }
+
+#----------------------------------------------------------------
+
+# import requests
+# payload={
+#          "email": "eve.holt@reqres.in",
+#          "password": "pistol"
+#         }
+# resp=requests.post("https://reqres.in/api/register",data=payload)
+# print(resp.status_code)
+# print(resp.json())
+
+# Output:
+#----------------
+# 200
+# {'id': 4, 'token': 'QpwL5tke4Pnpja7X4'}

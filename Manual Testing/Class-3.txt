@@ -1,0 +1,133 @@
+
+1) What is Review, Walkthrow, Insepction?
+
+Reviews:
+----------
+	It is performed in verification level
+	It is formal review within team	
+	Reviews like ( Requirement, desgin, coding,test data,test case reviews)		
+Walkthorws:
+-----------
+	It is performed in verification level
+	It is informal meeting
+	When ever we need, we just conduct walkthorw with in team
+
+Insepction:
+-------------
+	It is performed in verification level
+	It is formal review within team
+	It is peoper schdule meeting with in team
+	High level of management people will involve this section.
+
+
+2) What is QA and QC and QE
+
+	QA					QC
+
+1) QA- Quality Analysts			QC-Quality Controller
+
+2) QA morely focus on Process		QC morely focus on product
+
+3) prevention of find out defect	Detecting bug after the product build
+
+4) QA involve full SDLC lifecycle 	QC involve Testing phase only.
+
+5) High level management peoeple	Most of the time Testers are involve
+	involve in QA
+6) QA is focus building the Quality	QC is testing the quality
+
+
+
+QE : Quality Enginner
+
+
+When comes to QE it's more involvement of automation tester. who wrote the automation scripts
+
+The tester who wrote and execute the automation testing code.
+
+
+3) What are the Level of Testing is there?
+
+	1) Unit Testing
+	2) Integration Testing
+	3) System testing
+	4) UAT Testing
+
+4) Expalin about unit testing
+	
+	Unit testing:
+	-----------------
+		Unit testing is nothing but to test one module or peace of software to be tested by developer
+		The developer who wrote the code. he test the flow of the particular module
+		The developer who wrote the code, he conduct the meeting and review him code it self.
+		It is white box testing technique.	
+	Unit testing Techniques:
+	------------------------
+		1) Basic path testing
+		2) control structure
+		3) conditional statement
+		4) looping statements
+		5)mutation(Repetation) testing.
+
+
+5) Expain about Integration Testing
+
+	Integration Testing:
+	--------------------
+		Integration testing means to integrate one or more module and test the data flow of the module
+		It is also coduacted by developer point of view
+		It is also White box testing technique.
+
+
+	There are two types of integration testing:
+	------------------------------------------
+	Incremental testing
+	Non-incremental testing
+
+	Incremental testing:
+	---------------------
+			we have done the incremental testing with 2 different levels.Incermental adding new module.
+
+			1) Topdown apporach
+			--------------------
+					Adding new module which is child of the current module.
+			2) Bottomup apporach
+			---------------------
+					Adding new module which is parent of the current module.
+
+
+	Non-Incremental testing:
+	-------------------------
+			It is also type of integration testing
+			It is tested with whole module at a time
+			While doing non-incremental testing we may miss lot of module and fuctional testing.	
+			Found the Defect is not easy in Non-Incremental testing.		
+
+6) Expalin about System testing
+		
+		System Testing:
+		------------------
+			System testing is the process of actual tester involves.
+			System testing is mainly focus on complete software not for coding part
+			It is Black box testing
+			Before conducting system testing we must now customer requirments.
+			
+			It is mainly focus on :
+				
+				1) GUI Testing		-	It is mainly focus on GUI base test the elements
+				2) Funtional Testing	-	It is mainly focus on funtionality of the software
+				3) Non-Funtional Testing-	It is mainly focus on Non functional like DB test, Load test, Volume Test,Security Test
+				4) Usability Testing	-	It is mainly focus on usable matrix which is how the software is userfriendly.
+
+
+7) Expain about UAT testing
+
+			UAT Testing:
+			--------------
+				It is called as UserAcceptance Testing
+				In this testing done by end user/Customer and Tester.
+			This type of testing done in two level.
+
+				1) Alpha - this is also test which is done by user in our environment.
+				2) Beta - this is also test which is done by user in their environment.
+

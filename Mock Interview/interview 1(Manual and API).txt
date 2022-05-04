@@ -1,0 +1,157 @@
+Tell about your self:
+
+My self Anand.i am from thiruvannamalai. i have completed my bacholre degree in trichy.
+About my carrer almost 4 plus year of experiance in Manual,Api,backend testin. As tester primarly
+Analysis requirments,creating testcases,excuting test,finding the defect and reporting the defect.
+after from i used jirra tool.
+
+Any defect found in application that was very speical would you like to share something?
+
+I am in banking domain. joint applicant,minior applicant. the joint applicant age creteria is
+lower than 18. i found the defect regarding that.he can take minior account . this is critical
+defect i found in my career
+
+What is the difference between REST / SOAP API?
+
+SOAP:
+    it will support XML format
+    transfer data using XML format
+    Simple object transfer protocal
+    Generic protocal methods used in SOAP
+    SOAP is Custom desktop application
+    cacth is not support
+REST:
+   it will support XML,TXT,JSON
+   we can use HTTP,HTTPs protocols.
+   We have different type of HTTP is GET,POST,PUT,DELETE.
+   REST is faster than SOAP
+   It is design for network base architecture
+   catch is support.
+
+Whenever client told you to test so on so API.what are all the thinks you do?
+  Whenever dev or client give end point
+  we need to provide request to REST API
+  Is there any Qurey or path parameter is there. if there means we mention it in on URL
+  path parameter mention using / symbol
+  Qurey parameter mention like ? symbol
+
+ like, find whether of punecity whether is my path parameter and city= pune is my value 
+mention in question mark then hit enter
+	suppose it is json means we recevie 200 ok response.
+
+	- parameters
+	- data acuracy
+	- Error codes
+	- Authorization
+	- Non functional testing
+	- If need functional testing
+
+What are the main challanges you faced in API testing?
+
+Most of the time we get service realted error
+correct url error
+bad request 
+
+we need to analys that all the data are given correct or not.
+
+some time requirment understand worngly.
+
+	- triggering parameter is problem
+	- Put the requests and API are in sequence manner.
+
+What is the difference between top-down and bottom-up apporach?
+
+Top-down:
+
+	In business login upper model is working fine and lower model perform not work
+
+bottom-up:
+	
+	bottom model is wokring 
+
+	which is easier: Top-down is difficult to implement.
+			 so, we need to go with bottom-up apporach.
+
+
+Which testcases are written first?
+
+	will you go for blackbox testing first, or using white box testing.
+
+First checking with unit test for my code is working correctly or not. then, we will go with white
+box testing
+
+
+	general the company the dev do the testing. what we do with we need to get quality 
+level of the unit test . if it is coverage near to 70 to 80 percent we will go with white box testing
+or else we need to go with blcak box test case.
+
+What is Work bench?
+
+	It is related to some kind of documentation. 
+	It is nothing but how the testing activite performed these are all mention all the 
+activites . so, that other can easily understand about the testing process.
+
+What is random testing?
+	
+	Random testing is also called as monkey testing/ gorila testing.
+	we randomly test the application with positive and negative test input.
+
+What is difference between error seeding and error guessing?
+
+	Error seeding:
+			Knowing the defect of the application we insert new defect may be
+	we found out more defect.
+	
+	Error guessing:
+			based on the experiance of testing we will find out the defect.
+
+Conflict in team how will you slove the issue?
+
+	first up all we need to figure out what kind of issue they face. if it is personal or 
+work related issue means.
+		we need to arrange some section for cleared the doubt and some KT session arragement.
+
+How will you upgrade your self?
+	
+	I have most of the social networking link like, Linkedin,youtubes vedios.
+	and alos i have more senior person contact to grow in my career.
+
+	Using some websites like w3shools, tutorles etc,.linked in other person posts.
+
+What is the difference between load and stree testing?
+
+	These both are Performance testing:
+
+		Load testing:
+
+			suppose my application is desing for 100 user we need to test with <100 and >100.
+
+		Stress testing:
+
+			It will test application with more than the defined user like 150, 200
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

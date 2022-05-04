@@ -1,0 +1,342 @@
+'''
+--------------------------------------------
+                 Pytest
+--------------------------------------------
+    ( Flags, Markers,Fixtures,Parallel mode)
+
+    - Pytest is a frame work. Couple of classes and methods
+    - Pytest is open source
+    - It is easy to write small test and yet to scale suppot complex code also.
+    - It support Parallal mode, Suite of test, simple group test, condition, reports
+    - It support Pre-condition and Post-conditions
+
+    Features:
+        - Asset statements
+        - Auto-discovers
+        - Modular fixtures
+        - Unittest and noise test suites
+        - It also support external plugins
+
+Pytest will run also the files current directories or subdirectory the file mention as test_ or _test.
+
+
+'''
+
+def test_1():
+    x=10
+    y=10
+    assert x==y
+def test_2():
+    name='Selenium'
+    title='Selenium is for web automation'
+    assert name in title
+
+def test_3():
+    name='jenkins'
+    title='Jenkins is CI server'
+    assert name in title,"Title does not match"
+
+
+def test_login():
+    print("Login successful")
+
+def test_checkout():
+    print("check out successful")
+
+def test_logoff():
+    print("Logoff successful")
+#-------------------------------------------
+#  Flags in Pytest
+#------------------------------------------
+'''      -k matches the keywords
+        -m Markers
+        --markers
+        reporting
+            -r shows extra summary
+            -A all details
+        --fixtures
+'''
+# -k keywords match test only execute:
+# C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache>pytest test_second.py -k login
+
+#-rA it shows report with all details( by default it will select -fE)
+# C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache>pytest test_second.py -rA -k login
+
+# -v verbos it shows short summary about the test
+# C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache>pytest test_second.py -rA -k login -v
+
+# python -h or python --help for help documents
+
+
+'''
+    - unittest frame work(come along with python no need to install)
+    - nose frame work(unittest)
+'''
+
+#--------------------
+# junitxml
+#-----------------------
+# It shows all the test in one xml file
+
+# C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache>pytest -rA --junitxml=report1.xml
+
+# Output:
+'''
+<testsuites>
+<testsuite name="pytest" errors="0" failures="1" skipped="0" tests="6" time="0.374" timestamp="2022-04-11T11:21:53.804975" hostname="matrix-PC">
+<testcase classname="test_first" name="test_1" time="0.005"/>
+<testcase classname="test_first" name="test_2" time="0.002"/>
+<testcase classname="test_first" name="test_3" time="0.002">
+<failure message="AssertionError: Title does not match assert 'jenkins' in 'Jenkins is CI server'">def test_3(): name='jenkins' title='Jenkins is CI server' > assert name in title,"Title does not match" E AssertionError: Title does not match E assert 'jenkins' in 'Jenkins is CI server' test_first.py:35: AssertionError</failure>
+</testcase>
+<testcase classname="test_second" name="test_login" time="0.003"/>
+<testcase classname="test_second" name="test_checkout" time="0.002"/>
+<testcase classname="test_second" name="test_logoff" time="0.002"/>
+</testsuite>
+</testsuites>
+'''
+
+# ------------------
+# HTML reports
+#-------------------
+
+# C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache>pytest --html=myhtmlreport.html
+
+'''
+myhtmlreport.html
+Report generated on 11-Apr-2022 at 11:27:13 by pytest-html v3.1.1
+
+Environment
+Packages	{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.1"}
+Platform	Windows-7-6.1.7601-SP1
+Plugins	{"html": "3.1.1", "metadata": "2.0.1"}
+Python	3.8.10
+Summary
+6 tests ran in 0.42 seconds.
+
+(Un)check the boxes to filter the results.
+
+5 passed, 0 skipped, 1 failed, 0 errors, 0 expected failures, 0 unexpected passes
+Results
+Show all details / Hide all details
+'''
+
+#-------------------
+#  Pytest Markers
+#--------------------
+
+'''
+    - Userdefined markers
+    - Predefined markers
+'''
+
+'''
+import pytest
+
+
+@pytest.mark.smoke
+def test_login():
+    print("login")
+
+@pytest.mark.regression
+def test_addpro():
+    print("add prod")
+
+@pytest.mark.smoke
+def test_logoff():
+    print("logoff")
+
+'''
+
+#------------------
+# python.ini
+#---------------------
+'''
+[pytest]
+addopts= -rAv --html=autoreport.html
+
+markers=
+    smoke: this is smoke test
+    regression: this is regression
+
+
+'''
+
+# Predefined markers:
+#-------------------------------
+#skip:
+'''
+import pytest
+import sys
+
+@pytest.mark.skip
+def test_login():
+    print("login")
+
+'''
+# C:/Users/matrix/PycharmProjects/pytest/pytestdemo/.pytest_cache/test_3.py
+'''
+=========================== short test summary info ===========================
+PASSED test_3.py::test_addpro
+PASSED test_3.py::test_logoff
+SKIPPED [1] test_3.py:4: unconditional skip
+======================== 2 passed, 1 skipped in 0.06s =========================
+Process finished with exit code 0
+'''
+
+#sikpif:
+#---------------
+'''
+import pytest
+import sys
+
+@pytest.mark.skip
+def test_login():
+    print("login")
+
+@pytest.mark.skipif(sys.version_info<(3,9),reason="python version not supported")
+def test_addpro():
+    print("add prod")
+
+'''
+'''
+=================================== PASSES ====================================
+_________________________________ test_logoff _________________________________
+---------------------------- Captured stdout call -----------------------------
+logoff
+- generated html file: file://C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache\autoreport.html -
+=========================== short test summary info ===========================
+PASSED test_3.py::test_logoff
+SKIPPED [1] test_3.py:4: unconditional skip
+SKIPPED [1] test_3.py:8: python version not supported
+======================== 1 passed, 2 skipped in 0.06s =========================
+Process finished with exit code 0
+
+'''
+
+# Xfail:
+#------------
+
+# Excepted result as need to fail
+
+'''
+@pytest.mark.xfail
+def test_logoff():
+    assert True
+    print("logoff")
+
+'''
+
+'''
+- generated html file: file://C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache\autoreport.html -
+=========================== short test summary info ===========================
+XPASS test_3.py::test_logoff 
+============================= 1 xpassed in 0.03s ==============================
+
+
+'''
+
+'''
+@pytest.mark.xfail
+def test_logoff():
+    assert False
+    print("logoff")
+
+'''
+'''
+- generated html file: file://C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache\autoreport.html -
+=========================== short test summary info ===========================
+XFAIL test_3.py::test_logoff
+============================= 1 xfailed in 0.51s ==============================
+'''
+
+# Parameterized
+#--------------------
+'''
+import pytest
+import sys
+
+@pytest.mark.parametrize("username,password",
+                        [
+
+                            ("selenium","webdriver"),
+                            ("python","pytest"),
+                            ("Anand","K")
+
+                        ])
+def test_1(username,password):
+    print(username)
+    print(password)
+'''
+'''
+=================================== PASSES ====================================
+_________________________ test_1[selenium-webdriver] __________________________
+---------------------------- Captured stdout call -----------------------------
+selenium
+webdriver
+____________________________ test_1[python-pytest] ____________________________
+---------------------------- Captured stdout call -----------------------------
+python
+pytest
+_______________________________ test_1[Anand-K] _______________________________
+---------------------------- Captured stdout call -----------------------------
+Anand
+K
+- generated html file: file://C:\Users\matrix\PycharmProjects\pytest\pytestdemo\.pytest_cache\autoreport.html -
+=========================== short test summary info ===========================
+PASSED test_4.py::test_1[selenium-webdriver]
+PASSED test_4.py::test_1[python-pytest]
+PASSED test_4.py::test_1[Anand-K]
+============================== 3 passed in 0.06s ==============================
+
+'''
+
+#---------------------------
+# pytest fixtures
+#---------------------------
+
+"""
+    - Precodition - setup,connection
+    - Test
+    - Postcondition - close, clean
+
+"""
+import pytest
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+driver=None
+
+@pytest.fixture
+def setup():
+    print("start brower")
+    global driver
+    driver=webdriver.Chrome(ChromeDriverManager().install())
+    driver.maximize_window()
+    yield
+    driver.quit()
+    print("close the browser")
+
+
+def test_1(setup):
+    driver.get("http://www.facebook.com")
+    print("Test 1 executed")
+
+
+def test_2(setup):
+    driver.get("http://www.google.com")
+    print("Test 2 executed")
+
+
+def test_3(setup):
+    driver.get("http://www.gmail.com")
+    print("Test 3 executed")
+
+
+# Parallel mode
+# need to install pytest distributed plugin and run the command with the help of number of CPU mention in last.
+# pytest test_fix.py -n 3
+
+
+

@@ -1,0 +1,23 @@
+#------------------------------------
+# Keywords and positional arguments
+#------------------------------------
+
+# Positional Arguments
+def sub (x,y):
+    return(x-y)
+print(sub(15,10))
+
+# Keywords Arguments
+def sub(x,y):
+    return x-y
+print(sub(x=10,y=20))
+
+# Required Arguments
+def sub(x=10,y=5):
+    return x-y
+print(sub(20))
+
+# Optional Arguments
+def sub(x=10,y=20):
+    return x-y
+print(sub())

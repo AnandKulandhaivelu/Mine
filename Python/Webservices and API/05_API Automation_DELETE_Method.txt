@@ -1,0 +1,14 @@
+-------------------------------
+Web service and API Automation 
+-------------------------------
+
+#------------------------------
+# Delete the records
+#------------------------------
+# IT will return 204 as status code for no content success
+
+
+import requests
+
+r=requests.delete("https://reqres.in/api/users/2")
+print(r.status_code)
