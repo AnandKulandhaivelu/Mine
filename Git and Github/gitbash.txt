@@ -19,8 +19,8 @@ Git bash comment
 
 3) First time only we need to execute below comment:
   -----------------------------------------------------
-  	git config -- global user.name "Anand Kulandhaivelu"
-  	git config -- global user.email "anandvelu.k@gmail.com"
+  	git config --global user.name "Anand Kulandhaivelu"
+  	git config --global user.email "anandvelu.k@gmail.com"
 
 
 4) Get status of the Git:
@@ -51,3 +51,7 @@ Git bash comment
 	git commit -m "Commit command"
 	git push -u origin master
 	 
+10) My repository link:
+    ------------------------
+	https://github.com/AnandKulandhaivelu/Mine.git
+	https://github.com/AnandKulandhaivelu/projectnopcommerce.git	
